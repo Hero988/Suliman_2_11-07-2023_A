@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page Title -->
+    <title>ohmyfood</title> 
+
+    <!-- Font Awsome Import -->
+    <script src="https://kit.fontawesome.com/c3ee9dbdfd.js" crossorigin="anonymous"></script> 
+
+    <!-- The 'viewport' meta tag is used for responsive web design. 
+    It controls how your web page looks on different devices by setting the viewable area (viewport) of the web browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <!-- Link to the Shrikhand font from google fonts for Logo and Titles and link to the Roboto font for Text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+
+     <!-- Navigation section Styles file -->
+    <link rel="stylesheet" type="text/css" href="CSS_styles/Navigation.css">
+    <link rel="stylesheet" type="text/css" href="CSS_styles/How-it-works.css">
+    <link rel="stylesheet" type="text/css" href="CSS_styles/home-page.css">
+</head>
+<body>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay"></div>
+
+    <!-- Loading spinner -->
+    <div id="loading-spinner"></div>
+
+    <!-- Webpage Content -->
+    <div id="main-content" class="hidden-initially">
+            <!-- Navigation Section of the website -->
+            <section class="Navigation">  
+
+                    <!-- Div for the logo -->
+                    <div class="logo">
+
+                        <!-- The logo image -->
+                        <img src="images/logo/ohmyfood.png" alt="Logo"> 
+
+                    </div>
+                    <!-- Div for the city text -->
+                    <div class="city-container">
+
+                        <!-- The city text -->
+                        <span class="city-text">Paris, Belleville</span>
+
+                        <!-- The location-dot icon-->
+                        <i class="fa-solid fa-location-dot location-dot-custom" style="color: #4B4B4B;"></i>
+
+                    </div>
+                    <!-- Menu container -->
+                    <div class="menu-container">
+
+                        <!-- Menu content container -->
+                        <div class="menu-content-container">
+
+                        <!-- Menu header -->
+                        <div class="menu-row">
+
+                            <span class="menu-header">Book the menu you like</span>
+
+                        </div>
+                        <!-- Menu text -->
+                        <!-- A container for the text -->
+                        <div class="menu-row">
+
+                            <!-- A nested container for the text which we want to center align -->
+                            <div class="menu-text-containter">
+
+                                <!-- The first part of the text -->
+                                <span class="menu-text">Discover top-of-the-art restaurants we </span>
+
+                                <!-- Line break to create a new line -->
+                                <br>
+
+                                <!-- The second part of the text, which will be centered because of the 'center' class -->
+                                <span class="menu-text menu-text-picked">picked for you</span>
+
+                            </div>
+                        </div>
+                        <!-- Menu button -->
+                        <div class="menu-row">
+
+                            <a href="#restaurants-section">
+
+                                <button class="button-to-explore-restaurants">Explore our restaurants</button>
+
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- The main container for the "How it works" section -->
+            <section class="how-it-works-container">
+
+                    <!-- The title of the section -->
+                    <p class="section-title">How it works</p>
+
+                    <!-- The container for the cards -->
+                    <div class="cards-container">
+
+                        <!-- Each individual card -->
+                        <!-- Card 1 -->
+                        <div class="card">
+
+                            <!-- The number and icon for the card -->
+                            <div class="icon-container">
+
+                                <!-- The number of the card -->
+                                <span class="card-number">1</span>
+
+                                <!-- Mobile-screen-button icon -->
+                                <i class="fa-solid fa-mobile-screen-button custom-icon-style"></i>
+
+                            </div>
+                            <!-- The text for the card -->
+                            <p class="card-text">Chose a restaurant</p>
+
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card">
+
+                            <div class="icon-container">
+
+                                <!-- The number and icon for the card -->
+                                <span class="card-number">2</span>
+
+                                <!-- list icon -->
+                                <i class="fa-solid fa-list-ul custom-icon-style"></i>
+
+                            </div>
+                            <!-- The text for the card -->
+                            <p class="card-text">Create your menu</p>
+
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card card-3-custom">
+
+                            <div class="icon-container">
+
+                                <span class="card-number">3</span>
+
+                                <!-- store icon -->
+                                <i class="fa-sharp fa-solid fa-store custom-store-icon-style"></i>
+
+                            </div>
+
+                            <p class="card-text-restaurant">Go enjoy it at the restaurant</p>
+
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Restaurants Section-->
+            <section id="restaurants-section"> 
+            </section>
+    </div>
+
+
+
+</body>
+
