@@ -1,2 +1,33 @@
-
+// Importing _variables.scss file from Utils Folder
 @import "Utils/variables";
+
+// Importing _mixins.scss file from Utils Folder
+@import "Utils/mixins";
+
+// Importing _index.scss file from Pages Folder
+@import "Pages/index";
+
+// Importing _menu.scss file from Pages Folder
+@import "Pages/menu";
+
+// Importing _footer.scss file from Layout Folder
+@import "Layout/footer";
+
+// Importing _header.scss file from Layout Folder
+@import "Layout/header";
+
+// Importing _button.scss file from Components Folder
+@import "Components/button";
+
+// Importing _heart.scss file from Components Folder
+@import "Components/heart";
+
+// Importing _loader.scss file from Components Folder
+@import "Components/loader";
+
+// Importing _base.scss file from Base Folder
+@import "Base/base";
+
+// Importing _typography.scss file from Base Folder
+@import "Base/typography";
+
