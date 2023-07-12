@@ -225,12 +225,12 @@ a {
   padding-bottom: 50px;
 }
 
-.logo-for-footer img {
+.logo-for-footer {
   position: relative;
   display: block;
-  width: 94px;
-  height: 20px;
-  right: 120px;
+  right: 61px;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 .footer-row {
@@ -442,7 +442,7 @@ body {
   font-family: "Roboto";
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, header {
   font-family: "Shrikhand";
 }
 
