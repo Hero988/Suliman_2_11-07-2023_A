@@ -1,0 +1,70 @@
+
+// Mixen bassically stops you from continuous repeating the same css 
+// Put all the content that you do not want to repeatedly type here
+// Mixens should define styles
+
+// Mixin for flexbox (we can see how to use this in the _header.scss in .logo
+// we can also add arguments
+@mixin flexCenter($direction) {
+
+    // This is used to apply flexbox layout for the container
+    display: flex; 
+
+    // This is used to horizontally center the child elements
+    justify-content: center;
+    
+    // This is used to vertically center the child elements
+    align-items: center;
+
+    // Example of an argument being used
+    flex-direction: $direction;
+}
+
+// A mixin to simplify animation creation.
+// $name: The name of the animation.
+// $duration: The duration of the animation.
+// $delay: The delay before the animation starts. Defaults to 0s.
+// $iteration: The number of times the animation should repeat. Defaults to 1.
+// $direction: The direction of the animation. Defaults to forwards.
+@mixin animation($name, $duration, $delay: 0s, $iteration: 1, $direction: forwards) {
+    animation: $name $duration;
+    animation-delay: $delay;
+    animation-iteration-count: $iteration;
+    animation-fill-mode: $direction;
+}
+
+// A mixin to simplify the creation of @keyframes.
+// $name: The name of the keyframe.
+// $toContent: The styles to apply at the end of the keyframe.
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        to { @content; }
+    }
+}
+
+// A mixin to create a spinner.
+// $size: The size of the spinner. Defaults to 50px.
+// $borderSize: The size of the spinner border. Defaults to 5px.
+// $color: The color of the spinner. Defaults to #9356DC.
+@mixin spinner($size: 50px, $borderSize: 5px, $color: #9356DC) {
+    content: "";
+    display: block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: $borderSize solid $color;
+    border-top-color: transparent;
+    @include animation(spin, 1s, 0s, infinite);
+}
+
+
+// Mixens for Media Query
+// Mobile Mixen
+@mixin mobile {
+    // Normal media query for mobile (go to variables to see the $mobile)
+    @media (max-width: $mobile) {
+        // the content will be passed in here when the mixen is called
+        @content; 
+    }
+}
+

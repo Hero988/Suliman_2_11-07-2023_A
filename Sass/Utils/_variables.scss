@@ -1,0 +1,37 @@
+
+// Primary Color Variable as stated in the brief
+$primary-color: #9356DC;
+
+// Secondary Color Variable as stated in the brief
+$secondary-color: #FF79DA; 
+
+// Tertiary Color Variable as stated in the brief
+$tertiary-color: #99E2D0;
+
+// Background-color Varibale
+$background-color: #F6F6F6;
+
+// Maps are lists of key value pairs
+
+// Map for different fonts weights:
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+// To get the value of the map you do: map-get (the map name(font-weights), then the key (bold))
+// Parial sass files are snippts of css that you can include in other sass files and they start with _ 
+
+// Creating a function:
+// Functions should be used to compute values and return values
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+// To use the above function: weight(regular): it would return the regular weight
+
+// Creating a variable for media queries:
+// Mobile Variable
+$mobile: 768px;
+

@@ -1,0 +1,57 @@
+
+// Mobile Query for mobile
+@include mobile { 
+// The overlay that covers the entire screen while the spinner is visible.
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+    z-index: 1000;
+    // Use the animation mixin to add an animation to hide the overlay.
+    @include animation(hideOverlay, 2s);
+}
+
+// The spinner element itself.
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 1001;
+    display: block;
+    // Use the animation mixin to add an animation to hide the spinner.
+    @include animation(hideOverlay, 4s);
+    
+    // Use the spinner mixin to style the spinner.
+    &::before {
+        @include spinner();
+    }
+}
+
+// Hide the main content initially.
+.hidden-initially {
+    opacity: 0;
+    // Use the animation mixin to add an animation to show the content.
+    @include animation(showContent, 2s, 2s);
+}
+
+// Define the keyframes for the spin animation.
+@include keyframes(spin) {
+    transform: rotate(1turn);
+}
+
+// Define the keyframes for the hideOverlay animation.
+@include keyframes(hideOverlay) {
+    opacity: 0;
+}
+
+// Define the keyframes for the showContent animation.
+@include keyframes(showContent) {
+    opacity: 1;
+}
+}
