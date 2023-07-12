@@ -64,10 +64,10 @@
 
 
 // Mixens for Media Query
-// Mobile Mixen
-@mixin mobile {
-    // Normal media query for mobile (go to variables to see the $mobile)
-    @media (max-width: $mobile) {
+// Pc Mixen
+@mixin PC {
+    // Normal media query for PC (go to variables to see the $PC)
+    @media (min-width: $PC) {
         // the content will be passed in here when the mixen is called
         @content; 
     }

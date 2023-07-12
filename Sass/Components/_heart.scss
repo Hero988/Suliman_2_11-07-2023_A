@@ -1,0 +1,43 @@
+
+// Style for the FontAwesome heart icon
+.heart-custom {
+    position: relative;
+    color: #000000;
+    font-size: 30px;
+    top:-34px;
+    right: -139px;
+    &:hover {
+        opacity: 0;
+        color: #FFFFFF;
+    }
+}
+
+.heart-custom-2 {
+    position: relative;
+    font-size: 30px;
+    top:-64px;
+    right: -139px;
+
+    /* Apply a linear gradient as the background */
+    background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
+    background: linear-gradient(to right, #FF79DA, #9356DC);
+    
+    /* Apply the background to the text */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    
+    /* Make the text color transparent */
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    //initially sets the opacity to 0
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+
+  }
+  
+

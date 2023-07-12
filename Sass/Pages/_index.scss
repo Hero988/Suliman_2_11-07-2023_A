@@ -227,3 +227,76 @@
         top: -6px;
         right: -6px;
     }
+
+    #restaurants-section {
+        // So here we are using all the styles from .menu-content-container
+        @extend .menu-content-container;
+        padding: 112px 0; /* Adds 20px padding to the top and bottom */
+    }
+
+    .section-title-restaurant {
+        @extend .section-title;
+        position: relative;
+        top:-51px;
+    }
+
+    .cards-container-restaurant {
+        @extend .cards-container;
+    }
+
+    .card-image {
+        position: relative;
+        width: 370px; // This will make the image cover the full width of the .card-restaurant
+        height: 186px; // This will make the image height to be 50% of .card-restaurant height
+        object-fit: cover; // This will make the image cover the entire area of the .card-image, cropping it if necessary
+        object-position: center; // This will center the image within the .card-image
+        border-top-left-radius: 15px; // This will give the top left corner a 15px radius
+        border-top-right-radius: 15px; // This will give the top right corner a 15px radius
+        top: -21px;
+    }
+    
+    .card-restaurant {
+        // So here we are using all the styles from .card
+        @extend .card;
+        width: 350px;
+        height: 218px; 
+        background-color: #FFFFFF;
+        margin: 30px;  // Adds space of 20px around each side of the card.
+        padding-bottom: 0px;
+    }
+
+    a { 
+        // Target all anchor tags within .card-header
+        color: inherit; // Resets the color to inherit from its parent
+        text-decoration: none; // Removes the underline
+        cursor: pointer; // Ensures the cursor changes to a hand icon when hovering over the
+    }  
+    .card-header {
+        @extend .card-text;
+        font-size: 20px;
+        top: 0px;
+        right:102px;
+    } 
+
+    .card-text-restaurants {
+        position: relative;
+        font-size: 20px;
+        right: 125px;
+        top: 6px;
+    }
+
+    .card-header-2 {
+        @extend .card-header; 
+        right: 79px;
+    }
+
+    .card-header-3 {
+        @extend .card-header; 
+        right: 135px;
+    }
+
+    .card-header-4 {
+        @extend .card-header; 
+        right: 109px;
+    }
+    

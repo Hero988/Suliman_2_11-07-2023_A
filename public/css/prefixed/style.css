@@ -24,7 +24,7 @@
   right: 125px;
 }
 
-.menu-content-container {
+.menu-content-container, #restaurants-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,7 @@
   padding-bottom: 120px;
 }
 
-.section-title {
+.section-title, .section-title-restaurant {
   position: relative;
   right: 120px;
   font-size: 24px;
@@ -76,7 +76,7 @@
   bottom: 20px;
 }
 
-.cards-container {
+.cards-container, .cards-container-restaurant {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@
   gap: 20px;
 }
 
-.card, .card3 {
+.card, .card-restaurant, .card3 {
   width: 350px;
   height: 50px;
   display: flex;
@@ -124,7 +124,7 @@
   height: 5px;
 }
 
-.card-text, .card-text-restaurant {
+.card-text, .card-header, .card-header-4, .card-header-3, .card-header-2, .card-text-restaurant {
   position: relative;
   font-size: 18px;
   font-weight: 700;
@@ -154,24 +154,83 @@
   right: -6px;
 }
 
-@media (max-width: 768px) {
-  .logo img {
-    display: block;
-    margin: auto;
-    width: 40%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
-  /* Style for the logo container */
-  .logo {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 100%;
-  }
+#restaurants-section {
+  padding: 112px 0; /* Adds 20px padding to the top and bottom */
 }
+
+.section-title-restaurant {
+  position: relative;
+  top: -51px;
+}
+
+.card-image {
+  position: relative;
+  width: 370px;
+  height: 186px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  top: -21px;
+}
+
+.card-restaurant {
+  width: 350px;
+  height: 218px;
+  background-color: #FFFFFF;
+  margin: 30px;
+  padding-bottom: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-header, .card-header-4, .card-header-3, .card-header-2 {
+  font-size: 20px;
+  top: 0px;
+  right: 102px;
+}
+
+.card-text-restaurants {
+  position: relative;
+  font-size: 20px;
+  right: 125px;
+  top: 6px;
+}
+
+.card-header-2 {
+  right: 79px;
+}
+
+.card-header-3 {
+  right: 135px;
+}
+
+.card-header-4 {
+  right: 109px;
+}
+
+.logo img {
+  display: block;
+  margin: auto;
+  width: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* Style for the logo container */
+.logo {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
 /* Style for the button to explore restaurants */
 .button, .button-restaurants {
   /* Set the font size of the text inside the button */
@@ -204,6 +263,39 @@
 .button-restaurants {
   position: relative;
   top: -25px;
+}
+
+.heart-custom {
+  position: relative;
+  color: #000000;
+  font-size: 30px;
+  top: -34px;
+  right: -139px;
+}
+.heart-custom:hover {
+  opacity: 0;
+  color: #FFFFFF;
+}
+
+.heart-custom-2 {
+  position: relative;
+  font-size: 30px;
+  top: -64px;
+  right: -139px;
+  /* Apply a linear gradient as the background */
+  background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
+  background: linear-gradient(to right, #FF79DA, #9356DC);
+  /* Apply the background to the text */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  /* Make the text color transparent */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-custom-2:hover {
+  opacity: 1;
 }
 
 #loading-overlay {

@@ -1,8 +1,6 @@
 
 // Header of all the webpages
     // Style for the logo image
-    // view this as the media query:
-    @include mobile {
         .logo img{
             //This is used to convert the image into a block element 
             display: block;  
@@ -32,5 +30,4 @@
             height: 100%;
     
         }
-    }
 
