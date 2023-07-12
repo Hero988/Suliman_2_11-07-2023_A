@@ -33,7 +33,7 @@
   background-color: #F6F6F6;
 }
 
-.menu-text-containter {
+.menu-text-containter, .footer-text-containter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +155,8 @@
 }
 
 #restaurants-section {
-  padding: 112px 0; /* Adds 20px padding to the top and bottom */
+  padding: 36px 0; /* Adds 20px padding to the top and bottom */
+  padding-top: 100px;
 }
 
 .section-title-restaurant {
@@ -211,6 +212,62 @@ a {
 
 .card-header-4 {
   right: 109px;
+}
+
+.footer-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #353535;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.logo-for-footer img {
+  position: relative;
+  display: block;
+  width: 94px;
+  height: 20px;
+  right: 120px;
+}
+
+.footer-row {
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-text-containter {
+  color: white;
+}
+
+.footer-text-suggest {
+  position: relative;
+  right: 69px;
+}
+
+.footer-text-partner {
+  position: relative;
+  right: 76px;
+}
+
+.footer-text-legal {
+  position: relative;
+  right: 148px;
+  top: 6px;
+}
+
+.footer-text-contact {
+  position: relative;
+  right: 141px;
+  top: 15px;
+}
+
+.fa-solid.fa-utensils, .fa-handshake-angle {
+  position: relative;
+  right: 160px;
+  top: 17px;
 }
 
 .logo img {

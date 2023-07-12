@@ -1,0 +1,74 @@
+
+
+.footer-content-container {
+    // Center the content (Using a mixin)
+    @include flexCenter(column);
+
+    // This is used to make the container occupy the full height of its parent 
+    height: 100%;  
+    
+    // This adds a background color to the city container
+    background-color: #353535;
+
+    padding-top: 20px;
+
+    padding-bottom: 50px;
+
+    
+}
+
+.logo-for-footer img {  
+
+    position: relative;
+    
+    //This is used to convert the image into a block element 
+    display: block;  
+
+    width: 94px;
+
+    height: 20px;
+
+    right: 120px;
+}
+
+.footer-row {
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer-text-containter {
+    @extend .menu-text-containter;
+    color: white;
+}
+
+.footer-text-suggest {
+    position: relative;
+    right: 69px;
+}
+
+.footer-text-partner {
+    position: relative;
+    right: 76px;
+}
+
+.footer-text-legal {
+    position: relative;
+    right: 148px;
+    top: 6px;
+}
+
+.footer-text-contact {
+    position: relative;
+    right: 141px;
+    top: 15px;
+}
+
+.fa-solid.fa-utensils {
+    position: relative;
+    right: 160px;
+    top: 17px;
+}
+
+.fa-handshake-angle {    
+    @extend .fa-solid, .fa-utensils;
+}

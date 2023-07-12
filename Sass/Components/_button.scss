@@ -8,7 +8,7 @@
         padding: 18px;
 
         /* Apply a linear gradient as the background, transitioning from pink to purple */
-        background: linear-gradient(to right, #FF79DA, #9356DC);
+        background: linear-gradient(to right, $secondary-color, $primary-color);
 
         /* Make the corners of the button rounded */
         border-radius: 30px;

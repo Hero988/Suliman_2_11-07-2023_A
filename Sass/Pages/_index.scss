@@ -231,7 +231,8 @@
     #restaurants-section {
         // So here we are using all the styles from .menu-content-container
         @extend .menu-content-container;
-        padding: 112px 0; /* Adds 20px padding to the top and bottom */
+        padding: 36px 0; /* Adds 20px padding to the top and bottom */
+        padding-top: 100px;
     }
 
     .section-title-restaurant {
