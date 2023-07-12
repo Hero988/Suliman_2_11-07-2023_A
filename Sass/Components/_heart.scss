@@ -4,9 +4,14 @@
     position: relative;
     color: #000000;
     font-size: 30px;
-    top:-34px;
+    top:-44px;
     right: -139px;
     &:hover {
+        opacity: 0;
+        color: #FFFFFF;
+    }
+
+    &:active {
         opacity: 0;
         color: #FFFFFF;
     }
@@ -15,7 +20,7 @@
 .heart-custom-2 {
     position: relative;
     font-size: 30px;
-    top:-64px;
+    top:-74px;
     right: -139px;
 
     /* Apply a linear gradient as the background */
@@ -35,6 +40,14 @@
     opacity: 0;
 
     &:hover {
+        opacity: 1;
+        /* adds a pointer*/
+        cursor: pointer;
+    }
+
+    &:active {
+        /* adds a pointer*/
+        cursor: pointer;
         opacity: 1;
     }
 

@@ -190,15 +190,15 @@ a {
 
 .card-header, .card-header-4, .card-header-3, .card-header-2 {
   font-size: 20px;
-  top: 0px;
+  top: -8px;
   right: 102px;
 }
 
 .card-text-restaurants {
   position: relative;
   font-size: 20px;
-  right: 125px;
-  top: 6px;
+  right: -16px;
+  top: -1px;
 }
 
 .card-header-2 {
@@ -269,10 +269,14 @@ a {
   position: relative;
   color: #000000;
   font-size: 30px;
-  top: -34px;
+  top: -44px;
   right: -139px;
 }
 .heart-custom:hover {
+  opacity: 0;
+  color: #FFFFFF;
+}
+.heart-custom:active {
   opacity: 0;
   color: #FFFFFF;
 }
@@ -280,7 +284,7 @@ a {
 .heart-custom-2 {
   position: relative;
   font-size: 30px;
-  top: -64px;
+  top: -74px;
   right: -139px;
   /* Apply a linear gradient as the background */
   background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
@@ -295,6 +299,13 @@ a {
   opacity: 0;
 }
 .heart-custom-2:hover {
+  opacity: 1;
+  /* adds a pointer*/
+  cursor: pointer;
+}
+.heart-custom-2:active {
+  /* adds a pointer*/
+  cursor: pointer;
   opacity: 1;
 }
 

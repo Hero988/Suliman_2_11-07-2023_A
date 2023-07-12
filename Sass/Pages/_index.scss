@@ -274,15 +274,15 @@
     .card-header {
         @extend .card-text;
         font-size: 20px;
-        top: 0px;
+        top: -8px;
         right:102px;
     } 
 
     .card-text-restaurants {
         position: relative;
         font-size: 20px;
-        right: 125px;
-        top: 6px;
+        right: -16px;
+        top: -1px;
     }
 
     .card-header-2 {
