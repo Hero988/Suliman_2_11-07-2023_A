@@ -1,41 +1,40 @@
 
-// Mobile Query for mobile
-@include mobile{
+    /* Style for the button to explore restaurants */
     .button {
-        // Set the font size of the text inside the button
+        /* Set the font size of the text inside the button */
         font-size: 16px;
 
-        // Add padding around the text to create space between the text and the button border
+        /* Add padding around the text to create space between the text and the button border */
         padding: 18px;
 
-        // Apply a linear gradient as the background, transitioning from pink to purple
+        /* Apply a linear gradient as the background, transitioning from pink to purple */
         background: linear-gradient(to right, #FF79DA, #9356DC);
 
-        // Make the corners of the button rounded
+        /* Make the corners of the button rounded */
         border-radius: 30px;
 
-        // Set the color of the text inside the button to white to ensure good contrast against the gradient background
+        /* Set the color of the text inside the button to white to ensure good contrast against the gradient background */
         color: #FFFFFF;
 
-        // Remove the default border that buttons usually have
+        /* Remove the default border that buttons usually have */
         border: none;
 
-        // Add a darker shadow below the button to give a depth effect, along with the original shadow
+        /* Add a darker shadow below the button to give a depth effect, along with the original shadow */
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
 
-        // Specify a transition effect for the background and box-shadow properties to make the change smooth when hovering
+        /* Specify a transition effect for the background and box-shadow properties to make the change smooth when hovering */
         transition: background 0.3s ease, box-shadow 0.3s ease;
     
-        // Styles to apply when the button is being hovered over
+        /* Styles to apply when the button is being hovered over */
         &:hover {
-            // Lighten the gradient background by reducing the intensity of the colors
-            background: linear-gradient(to right, #FF99E6, #A67BD3);
+        /* Lighten the gradient background by reducing the intensity of the colors */
+        background: linear-gradient(to right, #FF99E6, #A67BD3);
 
-            // Make the drop shadow is more visible by increasing its spread and blur
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-            
-            // adds a pointer
-            cursor: pointer;
+        /* Make the drop shadow more visible by increasing its spread and blur */
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
+        /* adds a pointer*/
+        cursor: pointer;
         }
     }
 
@@ -47,6 +46,4 @@
         position: relative;
         top: -25px;
     }
-
-}
 

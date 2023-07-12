@@ -1,7 +1,4 @@
 
-// Mobile Query for mobile
-@include mobile {
-
     // Style for the city container 
     .city-container {
         // Center the content (Using a mixin)
@@ -230,4 +227,3 @@
         top: -6px;
         right: -6px;
     }
-}

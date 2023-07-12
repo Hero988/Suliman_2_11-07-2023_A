@@ -57,6 +57,11 @@
     @include animation(spin, 1s, 0s, infinite);
 }
 
+// A mixin to hide elements after a delay.
+// $duration: The duration of the fading out animation. Defaults to 2s.
+// $delay: The delay before the animation starts. Defaults to 0s.
+
+
 
 // Mixens for Media Query
 // Mobile Mixen

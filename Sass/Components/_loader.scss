@@ -1,6 +1,4 @@
 
-// Mobile Query for mobile
-@include mobile { 
 // The overlay that covers the entire screen while the spinner is visible.
 #loading-overlay {
     position: fixed;
@@ -48,10 +46,13 @@
 // Define the keyframes for the hideOverlay animation.
 @include keyframes(hideOverlay) {
     opacity: 0;
+    //disables the button when the animation is finished
+    visibility: hidden;
+    display: none; 
 }
 
 // Define the keyframes for the showContent animation.
 @include keyframes(showContent) {
     opacity: 1;
 }
-}
+
