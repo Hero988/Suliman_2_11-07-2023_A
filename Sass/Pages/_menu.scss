@@ -103,6 +103,16 @@
         margin-left: 22px;
         top: 11px;
 
+        // This sets the transition for the height property over 0.5s. 
+        // It will ensure that the height changes gradually over half a second, creating a smooth animation.
+        transition: height 0.5s;
+
+        // Initially hide the checkmark and set the card's height to 50px.
+        .checkmark, .custom-checkmark {
+            visibility: hidden;
+            height: 0;
+        }
+
         // Use the fadeIn animation, over a duration of 0.5s.
         // This applies the fadeIn animation to the element. 
         // The animation duration is set to 0.5s, meaning it will take half a second for the animation to complete from start to end.
@@ -122,6 +132,20 @@
         visibility: hidden;
     }
 
+        // When the card is hovered over
+        .card:hover {
+
+           position: relative;
+
+            cursor: pointer;
+
+            // Make the checkmark visible.
+            .checkmark, .custom-checkmark {
+                visibility: visible;
+                height: 74px;
+            }
+        }
+
     // Unpause the animation for each card at the right time.
     // @for $i from 1 through 9 {...}: This is a loop that generates SCSS for the first 9 .card elements nested within a .grid element.
     @for $i from 1 through 9 {
@@ -135,6 +159,42 @@
             animation-play-state: running;
             // In simpler terms, this code makes each card fade in one by one, each half a second apart, from being completely invisible to fully visible.
         }
+    }
+
+    .checkmark {
+        position: relative;
+
+        font-size: 25px;
+
+        color: white;
+
+        // Set the width and height to 50px each.
+        width: 70px;
+        height: 73px;
+
+        // Set the background color to green.
+        background-color: $tertiary-color;   
+
+        // Set the top-right and bottom-right corners to be round.
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        top: -77px;
+        right: -10px;
+        
+        // Temporary (taken out once finished).
+        // visibility: hidden;
+    } 
+
+    .custom-checkmark {
+        position: relative;
+        right: -25px;
+        top: 24px;
+        height: 100px;
+        width: 100px;
+
+        // Temporary (taken out once finished).
+        // visibility: hidden;
     }
 
     .card-title {

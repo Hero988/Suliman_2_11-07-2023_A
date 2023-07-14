@@ -323,10 +323,24 @@ a {
   background-color: white;
   margin-left: 22px;
   top: 11px;
+  transition: height 0.5s;
   animation: fadeIn 0.5s;
   animation-play-state: paused;
   animation-fill-mode: forwards;
   visibility: hidden;
+}
+.card .checkmark, .card3 .checkmark, .card .custom-checkmark, .card3 .custom-checkmark {
+  visibility: hidden;
+  height: 0;
+}
+
+.card:hover, .card3:hover {
+  position: relative;
+  cursor: pointer;
+}
+.card:hover .checkmark, .card3:hover .checkmark, .card:hover .custom-checkmark, .card3:hover .custom-checkmark {
+  visibility: visible;
+  height: 74px;
 }
 
 .grid .card:nth-of-type(1), .grid .card3:nth-of-type(1) {
@@ -372,6 +386,27 @@ a {
 .grid .card:nth-of-type(9), .grid .card3:nth-of-type(9) {
   animation-delay: 4.5s;
   animation-play-state: running;
+}
+
+.checkmark {
+  position: relative;
+  font-size: 25px;
+  color: white;
+  width: 70px;
+  height: 73px;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: -77px;
+  right: -10px;
+}
+
+.custom-checkmark {
+  position: relative;
+  right: -25px;
+  top: 24px;
+  height: 100px;
+  width: 100px;
 }
 
 .card-title, .card-title-9, .card-title-8, .card-title-7, .card-title-6, .card-title-5, .card-title-4, .card-title-3, .card-title-2, .card-title-1 {
