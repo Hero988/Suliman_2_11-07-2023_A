@@ -300,6 +300,16 @@ a {
   gap: 20px;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .card, .card3 {
   position: relative;
   width: 350px;
@@ -313,6 +323,55 @@ a {
   background-color: white;
   margin-left: 22px;
   top: 11px;
+  animation: fadeIn 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+.grid .card:nth-of-type(1), .grid .card3:nth-of-type(1) {
+  animation-delay: 0.5s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(2), .grid .card3:nth-of-type(2) {
+  animation-delay: 1s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(3), .grid .card3:nth-of-type(3) {
+  animation-delay: 1.5s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(4), .grid .card3:nth-of-type(4) {
+  animation-delay: 2s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(5), .grid .card3:nth-of-type(5) {
+  animation-delay: 2.5s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(6), .grid .card3:nth-of-type(6) {
+  animation-delay: 3s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(7), .grid .card3:nth-of-type(7) {
+  animation-delay: 3.5s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(8), .grid .card3:nth-of-type(8) {
+  animation-delay: 4s;
+  animation-play-state: running;
+}
+
+.grid .card:nth-of-type(9), .grid .card3:nth-of-type(9) {
+  animation-delay: 4.5s;
+  animation-play-state: running;
 }
 
 .card-title, .card-title-9, .card-title-8, .card-title-7, .card-title-6, .card-title-5, .card-title-4, .card-title-3, .card-title-2, .card-title-1 {

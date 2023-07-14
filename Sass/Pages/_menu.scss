@@ -65,6 +65,21 @@
         gap: 20px;
     }
 
+    // Define the animation.
+    // @keyframes fadeIn {...}: This defines the fadeIn animation. 
+    // The animation starts at 0% (with opacity: 0 and visibility: hidden), and ends at 100% (with opacity: 1 and visibility: visible). 
+    // This means that elements will transition from being completely transparent and invisible to fully opaque and visible.
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     // The styles for the card
     .card {
         position: relative;
@@ -83,12 +98,43 @@
         padding: 10px;
 
         border-radius: 20px;
-        
         background-color: white;
 
         margin-left: 22px;
-
         top: 11px;
+
+        // Use the fadeIn animation, over a duration of 0.5s.
+        // This applies the fadeIn animation to the element. 
+        // The animation duration is set to 0.5s, meaning it will take half a second for the animation to complete from start to end.
+        animation: fadeIn 0.5s;
+        
+        // The animation will start paused. We'll unpause it at the right time using a delay.
+        // This property initially pauses the animation. The animation is defined, but it doesn't start playing immediately.
+        animation-play-state: paused;
+
+        // Make sure the final state of the animation remains after it's done.
+        // This property specifies that once the animation is finished, the style of the element should remain as it was in the last keyframe (100%). 
+        // This means that the elements will stay visible even after the animation has completed.
+        animation-fill-mode: forwards;
+
+        // Initially hide the card.
+        //  This hides the element initially. The fadeIn animation will later turn the visibility back on as it plays.
+        visibility: hidden;
+    }
+
+    // Unpause the animation for each card at the right time.
+    // @for $i from 1 through 9 {...}: This is a loop that generates SCSS for the first 9 .card elements nested within a .grid element.
+    @for $i from 1 through 9 {
+        // .grid .card:nth-of-type(#{$i}) {...}: This targets the i-th .card within each .grid. #{$i} is a variable that holds the current number in the loop, 
+        // and nth-of-type is a CSS selector that matches elements of a certain type, based on their order among their siblings.
+        .grid .card:nth-of-type(#{$i}) {
+            // Unpause the animation after a delay. Each card's delay is slightly longer than the last.
+            //  This delays the start of the animation. Each .card has a slightly longer delay than the one before it, creating a staggered animation effect.
+            animation-delay: $i * 0.5s;
+            // This resumes the paused animation, causing each .card to start fading in after its delay period.
+            animation-play-state: running;
+            // In simpler terms, this code makes each card fade in one by one, each half a second apart, from being completely invisible to fully visible.
+        }
     }
 
     .card-title {
