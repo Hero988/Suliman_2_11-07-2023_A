@@ -10,8 +10,16 @@
     padding-top: 20px;
 
     padding-bottom: 50px;
+}
 
-    
+.footer-container-menu {
+    @extend .footer-content-container;
+
+    margin-top: -57px;
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+
 }
 
 .logo-for-footer{  

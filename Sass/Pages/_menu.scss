@@ -1,0 +1,181 @@
+
+    .arrow-left-custom {
+        position: relative;
+        right: 363px;
+        font-size: 20px;
+        color: #353535;
+    }
+
+    .image-styling {
+        height: 350px;
+        width: 450px;
+    }
+
+    .menu-container-ohmyfood {
+        position: relative;
+
+        top: -59px;
+
+        // This sets the width and height of the container to 100px each.
+        width: 420px;
+        height: 1200px;
+
+        padding-bottom: 50px;
+        
+        // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        
+        // This sets the background color of the container to F6F6F6.
+        background-color: #F6F6F6;
+    }
+
+    .menu-title {
+        position: relative;
+        top: 36px;
+        right: -23px;
+    }
+
+    .heart-custom-title {
+        position: relative;
+        right: -344px;
+        font-size: 30px;
+        top: -3px;
+    }
+
+    // The styles for the menu-container-main
+    .menu-container-main {
+        // Using display: flex; makes the container a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This adds some space between the flex items.
+        gap: 20px;
+
+        margin-top: 27px;
+    }
+
+    // The styles for the grid
+    .grid {
+        // This makes the grid a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This adds some space between the flex items.
+        gap: 20px;
+    }
+
+    // The styles for the card
+    .card {
+        position: relative;
+        // This sets the width and height of the card to 100px each.
+        width: 350px;
+        height: 50px;
+        // This makes the card a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This aligns the flex items to the right.
+        align-items: flex-end;
+        // This justifies the content to the space-between.
+        justify-content: space-between;
+        // This sets the padding inside the card.
+        padding: 10px;
+
+        border-radius: 20px;
+        
+        background-color: white;
+
+        margin-left: 22px;
+
+        top: 11px;
+    }
+
+    .card-title {
+        position: relative;
+        // This sets the margin to 0 to remove any space around the text.
+        margin: 0;
+        font-weight: bold;
+        font-size: 19px;
+    }
+
+    // Define the right values for each card title.
+    $right-values: 269px, 217px, 264px, 166px, 172px, 244px, 249px, 160px, 190px;
+
+    // Use @each to iterate over the right values.
+    @each $right-value in $right-values {
+        // Get the index of the current right value.
+        $index: index($right-values, $right-value);
+
+        // Use the index to generate the class name.
+        .card-title-#{$index} {
+            @extend .card-title;
+            right: $right-value;
+            top: 4px;
+        }
+    }
+
+    // $right-values is a list of the right values for each card title. 
+    //The @each directive is used to iterate over this list. 
+    //The index() function is used to get the index of the current right value, and this index is used to generate the class name .card-title-#{$index}. 
+    //The @extend directive is used to inherit the styles from .card-title, and the right and top properties are set as before.
+
+    .card-text-menu {
+        position: relative;
+        margin: 0;
+        font-weight: 400;
+        font-size: 17px;
+    }
+    
+    // Define the right values and font sizes for each card text.
+    $right-values: 145px, 146px, 56px, 55px, 78px, 201px, 280px, 190px, 147px;
+    $font-sizes: 17px, 17px, 19px, 16px, 16px, 16px, 16px, 16px, 16px;
+    
+    // Use @each to iterate over the right values and font sizes at the same time.
+    @each $right-value, $font-size in zip($right-values, $font-sizes) {
+        // Get the index of the current right value.
+        $index: index($right-values, $right-value);
+    
+        // Use the index to generate the class name.
+        .card-text-menu-#{$index} {
+            @extend .card-text-menu;
+            right: $right-value;
+            top: 11px;
+            font-size: $font-size;
+        }
+    }
+
+    // $right-values is a list of the right values for each card text, and $font-sizes is a list of the font-size values for each card text. 
+    // The zip() function is used to combine these lists into a list of pairs, so that we can iterate over them at the same time.
+    // The @each directive is used to iterate over this combined list. 
+    // The index() function is used to get the index of the current right value, and this index is used to generate the class name .card-text-menu-#{$index}. 
+    // The @extend directive is used to inherit the styles from .card-text-menu, and the right, top, and font-size properties are set as before.
+
+    .card-price {
+        position: relative;
+        font-weight: bold;
+        font-size: 18px;
+        right: 13px;
+        top: -11px
+    }
+
+    .grid-title {
+        position: relative;
+        right: -26px;
+        top: 20px;
+        padding-bottom: 10px;
+
+        // This adds a half line under the text.
+        // The line is 1px high, spans 50% of the width of the text, and is green.
+        border-bottom: 3px solid $tertiary-color;
+
+        // This adjusts the width of the line to make it a "half line".
+        // The line is centered by setting the left and right margins to auto.
+        width: 10%;
+
+        // This prevents the text from wrapping to the next line.
+        white-space: nowrap;
+    }
+
+
+    

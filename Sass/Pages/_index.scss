@@ -193,14 +193,14 @@
     }
 
     // Styling for the card text
-    .card-text {
+    .card-text-how-it-works {
         // Adjust the size, color, etc. as needed
         position: relative;
         font-size: 18px;
         font-weight: weight(bold);
         text-align: center;
-        top: -7px;
-        right: 33px;
+        top: -13px;
+        right: 126px;
     }
 
     .custom-icon-style {
@@ -222,10 +222,10 @@
     .card-text-restaurant {
     // Adjust the size, color, etc. as needed
         // So here we are using all the styles from card
-        @extend .card-text;
+        @extend .card-text-how-it-works;
         // We are just changing the margins
-        top: -6px;
-        right: -6px;
+        top: -10px;
+        right: 54px;
     }
 
     #restaurants-section {
@@ -257,8 +257,20 @@
     }
     
     .card-restaurant {
-        // So here we are using all the styles from .card
-        @extend .card;
+        // Center the content (Using a mixin)
+        @include flexCenter(column);
+
+        // Add background color (using the varible $background-color) and rounded corners 
+        background-color: $background-color;
+        border-radius: 30px;
+
+        // Add padding around the content inside the card 
+        padding: 10px;
+
+        // Add a shadow border. Adjust the values as needed 
+        // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+        
         position: relative; // This is required for positioning the 'card-new' absolutely.
         width: 350px;
         height: 218px; 
@@ -315,7 +327,7 @@
         cursor: pointer; // Ensures the cursor changes to a hand icon when hovering over the
     }  
     .card-header {
-        @extend .card-text;
+        @extend .card-text-how-it-works;
         font-size: 20px;
         top: -8px;
         right:102px;
