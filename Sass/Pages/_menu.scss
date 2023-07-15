@@ -150,11 +150,6 @@
             // In simpler terms, this code makes each card fade in one by one, each half a second apart, from being completely invisible to fully visible.
         }
     }
-
-    .card-title, .card-text-menu, .card-price {
-        margin: 0;
-        /* remove position and right properties */
-    }
     
     /* adjust width of .card-text-menu */
     .card-text-menu {

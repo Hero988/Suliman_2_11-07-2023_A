@@ -399,11 +399,6 @@ a {
   animation-play-state: running;
 }
 
-.card-title, .card-text-menu, .card-price {
-  margin: 0;
-  /* remove position and right properties */
-}
-
 /* adjust width of .card-text-menu */
 .card-text-menu {
   width: 100%; /* take up full width of the card */
