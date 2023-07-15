@@ -319,28 +319,39 @@ a {
   align-items: flex-end;
   justify-content: space-between;
   padding: 10px;
+  align-items: flex-start; /* Align items to the start (left side) of the card */
+  justify-content: space-between; /* Distribute space evenly between items */
   border-radius: 20px;
   background-color: white;
   margin-left: 22px;
   top: 11px;
-  transition: height 0.5s;
-  animation: fadeIn 0.5s;
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
-  visibility: hidden;
+  /* Hide the checkmark initially and set its width to 0 */
 }
 .card .checkmark, .card3 .checkmark, .card .custom-checkmark, .card3 .custom-checkmark {
-  visibility: hidden;
-  height: 0;
+  opacity: 0;
+  width: 0;
+  /* Start with the element's width at 0 */
+  /* Transition both the width and opacity properties */
+  transition: width 0.5s, opacity 0.5s;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left side) of the card */
+  justify-content: space-between; /* Distribute space evenly between items */
+}
+
+/* When the card is hovered over */
 .card:hover, .card3:hover {
   position: relative;
   cursor: pointer;
+  /* Make the checkmark visible and increase its width */
 }
 .card:hover .checkmark, .card3:hover .checkmark, .card:hover .custom-checkmark, .card3:hover .custom-checkmark {
-  visibility: visible;
-  height: 74px;
+  opacity: 1;
+  /* Increase the width to the original size */
+  width: 70px; /* Update this value to the original width of your checkmark */
 }
 
 .grid .card:nth-of-type(1), .grid .card3:nth-of-type(1) {
@@ -388,6 +399,17 @@ a {
   animation-play-state: running;
 }
 
+.card-title, .card-text-menu, .card-price {
+  margin: 0;
+  /* remove position and right properties */
+}
+
+/* adjust width of .card-text-menu */
+.card-text-menu {
+  width: 100%; /* take up full width of the card */
+  /* rest of your styles... */
+}
+
 .checkmark {
   position: relative;
   font-size: 25px;
@@ -397,8 +419,8 @@ a {
   background-color: #99E2D0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  top: -77px;
-  right: -10px;
+  top: -82px;
+  right: -290px;
 }
 
 .custom-checkmark {
@@ -409,125 +431,31 @@ a {
   width: 100px;
 }
 
-.card-title, .card-title-9, .card-title-8, .card-title-7, .card-title-6, .card-title-5, .card-title-4, .card-title-3, .card-title-2, .card-title-1 {
+.card-title {
   position: relative;
   margin: 0;
   font-weight: bold;
   font-size: 19px;
-}
-
-.card-title-1 {
-  right: 269px;
   top: 4px;
 }
 
-.card-title-2 {
-  right: 217px;
-  top: 4px;
-}
-
-.card-title-3 {
-  right: 264px;
-  top: 4px;
-}
-
-.card-title-4 {
-  right: 166px;
-  top: 4px;
-}
-
-.card-title-5 {
-  right: 172px;
-  top: 4px;
-}
-
-.card-title-6 {
-  right: 244px;
-  top: 4px;
-}
-
-.card-title-7 {
-  right: 249px;
-  top: 4px;
-}
-
-.card-title-8 {
-  right: 160px;
-  top: 4px;
-}
-
-.card-title-9 {
-  right: 190px;
-  top: 4px;
-}
-
-.card-text-menu, .card-text-menu-9, .card-text-menu-8, .card-text-menu-7, .card-text-menu-6, .card-text-menu-5, .card-text-menu-4, .card-text-menu-3, .card-text-menu-2, .card-text-menu-1 {
-  position: relative;
+.card-text-menu {
   margin: 0;
-  font-weight: 400;
-  font-size: 17px;
-}
-
-.card-text-menu-1 {
-  right: 145px;
-  top: 11px;
-  font-size: 17px;
-}
-
-.card-text-menu-2 {
-  right: 146px;
-  top: 11px;
-  font-size: 17px;
-}
-
-.card-text-menu-3 {
-  right: 56px;
-  top: 11px;
-  font-size: 19px;
-}
-
-.card-text-menu-4 {
-  right: 55px;
-  top: 11px;
-  font-size: 16px;
-}
-
-.card-text-menu-5 {
-  right: 78px;
-  top: 11px;
-  font-size: 16px;
-}
-
-.card-text-menu-6 {
-  right: 201px;
-  top: 11px;
-  font-size: 16px;
-}
-
-.card-text-menu-7 {
-  right: 280px;
-  top: 11px;
-  font-size: 16px;
-}
-
-.card-text-menu-8 {
-  right: 190px;
-  top: 11px;
-  font-size: 16px;
-}
-
-.card-text-menu-9 {
-  right: 147px;
-  top: 11px;
-  font-size: 16px;
+  font-size: 16.8px;
+  margin-top: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 310px;
+  display: block;
 }
 
 .card-price {
   position: relative;
   font-weight: bold;
-  font-size: 18px;
-  right: 13px;
-  top: -11px;
+  font-size: 16px;
+  right: -321px;
+  top: -21px;
 }
 
 .grid-title {
