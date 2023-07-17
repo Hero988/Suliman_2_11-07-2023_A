@@ -150,8 +150,6 @@
     .card:hover {
         position: relative;
         cursor: pointer;
-        /* Reduced the width of the card */
-        width: 295px;
 
         .card-price {
             /* Moves the card price to the right when the card is hovered on */

@@ -363,8 +363,6 @@ a {
 .card:hover, .card3:hover {
   position: relative;
   cursor: pointer;
-  /* Reduced the width of the card */
-  width: 295px;
   /* Make the checkmark visible and increase its width */
 }
 .card:hover .card-price, .card3:hover .card-price {
