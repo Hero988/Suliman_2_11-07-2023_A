@@ -80,6 +80,17 @@
         }
     }
 
+    @keyframes slideUpFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     // The styles for the card
     .card {
         position: relative;
@@ -103,16 +114,28 @@
         border-radius: 20px;
         background-color: white;
 
+        transition: width 0.3s ease;
+
         margin-left: 22px;
         top: 11px;
+
+        opacity: 0; /* Hide the card initially */
+
+        /* Add the animation */
+        animation: slideUpFadeIn 2s ease-out;
+
+        // cards remain visible after the animation is complete.
+        animation-fill-mode: forwards;
 
         /* Hide the checkmark initially and set its width to 0 */
         .checkmark, .custom-checkmark {
             opacity: 0;
             width: 0;
             /* Start with the element's width at 0 */
-            /* Transition both the width and opacity properties */
-            transition: width 0.5s, opacity 0.5s; 
+            /* The checkmark is moved 100px to the right (offscreen) */
+            transform: translateX(100px); 
+            /* Transition both the width, opacity and transform properties */
+            transition: width 0.5s, opacity 0.5s, transform 0.5s; 
         }
     }
 
@@ -127,12 +150,25 @@
     .card:hover {
         position: relative;
         cursor: pointer;
+        /* Reduced the width of the card */
+        width: 295px;
+
+        .card-price {
+            /* Moves the card price to the right when the card is hovered on */
+            right: -254px;
+        }
+
+        .card-text-menu {
+            width: 250px;
+        }
 
         /* Make the checkmark visible and increase its width */
         .checkmark, .custom-checkmark {
             opacity: 1;
             /* Increase the width to the original size */
             width: 70px; /* Update this value to the original width of your checkmark */
+            /* Move the checkmark to its original position */
+            transform: translateX(0); 
         }
     }
 
@@ -164,9 +200,8 @@
 
         color: white;
 
-        // Set the width and height to 50px each.
         width: 70px;
-        height: 73px;
+        height: 70px;
 
         // Set the background color to green.
         background-color: $tertiary-color;   
@@ -201,6 +236,7 @@
         margin: 0;
         font-size: 16.8px;
         margin-top: 11px;
+        transition: width 0.3s ease;
 
         white-space: nowrap;  // Prevents the text from wrapping to the next line
         overflow: hidden;  // Clips the text if it overflows
@@ -214,7 +250,8 @@
         font-weight: bold;
         font-size: 16px;
         right: -321px;
-        top: -21px
+        top: -21px;
+        transition: right 0.3s ease;
     }
 
     .grid-title {

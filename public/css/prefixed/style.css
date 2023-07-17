@@ -310,6 +310,16 @@ a {
     visibility: visible;
   }
 }
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .card, .card3 {
   position: relative;
   width: 350px;
@@ -323,16 +333,23 @@ a {
   justify-content: space-between; /* Distribute space evenly between items */
   border-radius: 20px;
   background-color: white;
+  transition: width 0.3s ease;
   margin-left: 22px;
   top: 11px;
+  opacity: 0; /* Hide the card initially */
+  /* Add the animation */
+  animation: slideUpFadeIn 2s ease-out;
+  animation-fill-mode: forwards;
   /* Hide the checkmark initially and set its width to 0 */
 }
 .card .checkmark, .card3 .checkmark, .card .custom-checkmark, .card3 .custom-checkmark {
   opacity: 0;
   width: 0;
   /* Start with the element's width at 0 */
-  /* Transition both the width and opacity properties */
-  transition: width 0.5s, opacity 0.5s;
+  /* The checkmark is moved 100px to the right (offscreen) */
+  transform: translateX(100px);
+  /* Transition both the width, opacity and transform properties */
+  transition: width 0.5s, opacity 0.5s, transform 0.5s;
 }
 
 .card-content {
@@ -346,12 +363,23 @@ a {
 .card:hover, .card3:hover {
   position: relative;
   cursor: pointer;
+  /* Reduced the width of the card */
+  width: 295px;
   /* Make the checkmark visible and increase its width */
+}
+.card:hover .card-price, .card3:hover .card-price {
+  /* Moves the card price to the right when the card is hovered on */
+  right: -254px;
+}
+.card:hover .card-text-menu, .card3:hover .card-text-menu {
+  width: 250px;
 }
 .card:hover .checkmark, .card3:hover .checkmark, .card:hover .custom-checkmark, .card3:hover .custom-checkmark {
   opacity: 1;
   /* Increase the width to the original size */
   width: 70px; /* Update this value to the original width of your checkmark */
+  /* Move the checkmark to its original position */
+  transform: translateX(0);
 }
 
 .grid .card:nth-of-type(1), .grid .card3:nth-of-type(1) {
@@ -410,7 +438,7 @@ a {
   font-size: 25px;
   color: white;
   width: 70px;
-  height: 73px;
+  height: 70px;
   background-color: #99E2D0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -438,6 +466,7 @@ a {
   margin: 0;
   font-size: 16.8px;
   margin-top: 11px;
+  transition: width 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -451,6 +480,7 @@ a {
   font-size: 16px;
   right: -321px;
   top: -21px;
+  transition: right 0.3s ease;
 }
 
 .grid-title {
