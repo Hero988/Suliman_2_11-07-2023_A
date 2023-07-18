@@ -213,6 +213,12 @@
         
     } 
 
+    .checkmark-enchanted-plate {
+        @extend .checkmark;
+        height: 93px;
+        top: -105px;
+    }
+
     .custom-checkmark {
         position: relative;
         right: -25px;
@@ -268,6 +274,23 @@
 
         // This prevents the text from wrapping to the next line.
         white-space: nowrap;
+    }
+
+    .card-enchanted-plate {
+        @extend .card;
+        height: 71px;
+    }
+
+    .menu-container-ohmyfood-enchanted-plate {
+        @extend .menu-container-ohmyfood;
+        top:-114px;
+        height: 1266px;
+    }
+
+    .menu-container-ohmyfood-Le-Gourmand {
+        @extend .menu-container-ohmyfood;
+        top:-114px;
+        height: 1217px;
     }
 
 

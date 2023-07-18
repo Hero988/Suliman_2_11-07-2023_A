@@ -22,6 +22,11 @@
 
 }
 
+.footer-container-menu-enchanted-plate {
+    @extend .footer-container-menu;
+    margin-top: -111px;
+}
+
 .logo-for-footer{  
 
     position: relative;

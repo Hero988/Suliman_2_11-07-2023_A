@@ -84,7 +84,7 @@
   gap: 20px;
 }
 
-.card, .card3 {
+.card, .card-enchanted-plate, .card3 {
   width: 350px;
   height: 50px;
   display: flex;
@@ -263,7 +263,7 @@ a {
   width: 450px;
 }
 
-.menu-container-ohmyfood {
+.menu-container-ohmyfood, .menu-container-ohmyfood-Le-Gourmand, .menu-container-ohmyfood-enchanted-plate {
   position: relative;
   top: -59px;
   width: 420px;
@@ -320,7 +320,7 @@ a {
     transform: translateY(0);
   }
 }
-.card, .card3 {
+.card, .card-enchanted-plate, .card3 {
   position: relative;
   width: 350px;
   height: 50px;
@@ -342,7 +342,7 @@ a {
   animation-fill-mode: forwards;
   /* Hide the checkmark initially and set its width to 0 */
 }
-.card .checkmark, .card3 .checkmark, .card .custom-checkmark, .card3 .custom-checkmark {
+.card .checkmark, .card-enchanted-plate .checkmark, .card .checkmark-enchanted-plate, .card-enchanted-plate .checkmark-enchanted-plate, .card3 .checkmark, .card3 .checkmark-enchanted-plate, .card .custom-checkmark, .card-enchanted-plate .custom-checkmark, .card3 .custom-checkmark {
   opacity: 0;
   width: 0;
   /* Start with the element's width at 0 */
@@ -360,19 +360,19 @@ a {
 }
 
 /* When the card is hovered over */
-.card:hover, .card3:hover {
+.card:hover, .card-enchanted-plate:hover, .card3:hover {
   position: relative;
   cursor: pointer;
   /* Make the checkmark visible and increase its width */
 }
-.card:hover .card-price, .card3:hover .card-price {
+.card:hover .card-price, .card-enchanted-plate:hover .card-price, .card3:hover .card-price {
   /* Moves the card price to the right when the card is hovered on */
   right: -254px;
 }
-.card:hover .card-text-menu, .card3:hover .card-text-menu {
+.card:hover .card-text-menu, .card-enchanted-plate:hover .card-text-menu, .card3:hover .card-text-menu {
   width: 250px;
 }
-.card:hover .checkmark, .card3:hover .checkmark, .card:hover .custom-checkmark, .card3:hover .custom-checkmark {
+.card:hover .checkmark, .card-enchanted-plate:hover .checkmark, .card:hover .checkmark-enchanted-plate, .card-enchanted-plate:hover .checkmark-enchanted-plate, .card3:hover .checkmark, .card3:hover .checkmark-enchanted-plate, .card:hover .custom-checkmark, .card-enchanted-plate:hover .custom-checkmark, .card3:hover .custom-checkmark {
   opacity: 1;
   /* Increase the width to the original size */
   width: 70px; /* Update this value to the original width of your checkmark */
@@ -380,47 +380,47 @@ a {
   transform: translateX(0);
 }
 
-.grid .card:nth-of-type(1), .grid .card3:nth-of-type(1) {
+.grid .card:nth-of-type(1), .grid .card-enchanted-plate:nth-of-type(1), .grid .card3:nth-of-type(1) {
   animation-delay: 0.5s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(2), .grid .card3:nth-of-type(2) {
+.grid .card:nth-of-type(2), .grid .card-enchanted-plate:nth-of-type(2), .grid .card3:nth-of-type(2) {
   animation-delay: 1s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(3), .grid .card3:nth-of-type(3) {
+.grid .card:nth-of-type(3), .grid .card-enchanted-plate:nth-of-type(3), .grid .card3:nth-of-type(3) {
   animation-delay: 1.5s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(4), .grid .card3:nth-of-type(4) {
+.grid .card:nth-of-type(4), .grid .card-enchanted-plate:nth-of-type(4), .grid .card3:nth-of-type(4) {
   animation-delay: 2s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(5), .grid .card3:nth-of-type(5) {
+.grid .card:nth-of-type(5), .grid .card-enchanted-plate:nth-of-type(5), .grid .card3:nth-of-type(5) {
   animation-delay: 2.5s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(6), .grid .card3:nth-of-type(6) {
+.grid .card:nth-of-type(6), .grid .card-enchanted-plate:nth-of-type(6), .grid .card3:nth-of-type(6) {
   animation-delay: 3s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(7), .grid .card3:nth-of-type(7) {
+.grid .card:nth-of-type(7), .grid .card-enchanted-plate:nth-of-type(7), .grid .card3:nth-of-type(7) {
   animation-delay: 3.5s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(8), .grid .card3:nth-of-type(8) {
+.grid .card:nth-of-type(8), .grid .card-enchanted-plate:nth-of-type(8), .grid .card3:nth-of-type(8) {
   animation-delay: 4s;
   animation-play-state: running;
 }
 
-.grid .card:nth-of-type(9), .grid .card3:nth-of-type(9) {
+.grid .card:nth-of-type(9), .grid .card-enchanted-plate:nth-of-type(9), .grid .card3:nth-of-type(9) {
   animation-delay: 4.5s;
   animation-play-state: running;
 }
@@ -431,7 +431,7 @@ a {
   /* rest of your styles... */
 }
 
-.checkmark {
+.checkmark, .checkmark-enchanted-plate {
   position: relative;
   font-size: 25px;
   color: white;
@@ -442,6 +442,11 @@ a {
   border-bottom-right-radius: 20px;
   top: -82px;
   right: -290px;
+}
+
+.checkmark-enchanted-plate {
+  height: 93px;
+  top: -105px;
 }
 
 .custom-checkmark {
@@ -491,7 +496,21 @@ a {
   white-space: nowrap;
 }
 
-.footer-content-container, .footer-container-menu {
+.card-enchanted-plate {
+  height: 71px;
+}
+
+.menu-container-ohmyfood-enchanted-plate {
+  top: -114px;
+  height: 1266px;
+}
+
+.menu-container-ohmyfood-Le-Gourmand {
+  top: -114px;
+  height: 1217px;
+}
+
+.footer-content-container, .footer-container-menu, .footer-container-menu-enchanted-plate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -501,10 +520,14 @@ a {
   padding-bottom: 50px;
 }
 
-.footer-container-menu {
+.footer-container-menu, .footer-container-menu-enchanted-plate {
   margin-top: -57px;
   padding-bottom: 0px;
   padding-top: 0px;
+}
+
+.footer-container-menu-enchanted-plate {
+  margin-top: -111px;
 }
 
 .logo-for-footer {
