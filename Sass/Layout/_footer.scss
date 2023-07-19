@@ -82,3 +82,20 @@
 .fa-handshake-angle {    
     @extend .fa-solid, .fa-utensils;
 }
+
+@include PC {
+    .footer-container-menu {
+        @extend .footer-content-container;
+    
+        margin-top: 1px;
+    
+        padding-bottom: 0px;
+        padding-top: 0px;
+    
+    }
+
+    .footer-container-menu-enchanted-plate {
+        @extend .footer-container-menu;
+        margin-top: -366px;
+    }
+}

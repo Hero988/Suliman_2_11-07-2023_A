@@ -59,3 +59,17 @@
         right: -99px;
     }
 
+    @include PC {
+        .button-order {
+            // So here we are using all the styles from .button
+            @extend .button;
+    
+            width: 200px;
+    
+            //just changing where the button is
+            position: relative;
+            top: 127px;
+            right: 515px;
+        } 
+    }
+

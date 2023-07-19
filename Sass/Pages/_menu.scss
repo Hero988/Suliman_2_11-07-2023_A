@@ -293,5 +293,112 @@
         height: 1217px;
     }
 
+    @include PC {
+        .menu-container-ohmyfood {
+            position: relative;
+    
+            top: -2px;
+    
+            // This sets the width and height of the container to 100px each.
+            width: 2181px;
+            height: 781px;
+    
+            padding-bottom: 50px;
+            
+            // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            
+            // This sets the background color of the container to F6F6F6.
+            background-color: #F6F6F6;
+        }
+
+        .menu-container-ohmyfood-Le-Gourmand {
+            @extend .menu-container-ohmyfood;
+            top:-369px;
+            right: 18px;
+        }
+
+        .menu-container-ohmyfood-enchanted-plate {
+            @extend .menu-container-ohmyfood;
+            top:-369px;
+            right: 18px;
+        }
+
+        // The styles for the grid
+        .grid {
+            // This makes the grid a flex container and its children flex items.
+            display: flex;
+            // This makes the main axis vertical and lays out the flex items in a column.
+            flex-direction: row;
+            // This adds some space between the flex items.
+            gap: 20px;
+        }
+
+        .card-4 {
+            position: relative;
+            // This sets the width and height of the card to 100px each.
+            width: 350px;
+            height: 50px;
+            // This makes the card a flex container and its children flex items.
+            display: flex;
+            // This makes the main axis vertical and lays out the flex items in a column.
+            flex-direction: column;
+            // This aligns the flex items to the right.
+            align-items: flex-end;
+            // This justifies the content to the space-between.
+            justify-content: space-between;
+            // This sets the padding inside the card.
+            padding: 10px;
+    
+            align-items: flex-start; /* Align items to the start (left side) of the card */
+            justify-content: space-between; /* Distribute space evenly between items */
+    
+            border-radius: 20px;
+            background-color: white;
+    
+            transition: width 0.3s ease;
+    
+            margin-left: 1478px;
+            top: -206px;
+    
+            opacity: 0; /* Hide the card initially */
+    
+            /* Add the animation */
+            animation: slideUpFadeIn 2s ease-out;
+    
+            // cards remain visible after the animation is complete.
+            animation-fill-mode: forwards;
+    
+            /* Hide the checkmark initially and set its width to 0 */
+            .checkmark, .custom-checkmark {
+                opacity: 0;
+                width: 0;
+                /* Start with the element's width at 0 */
+                /* The checkmark is moved 100px to the right (offscreen) */
+                transform: translateX(100px); 
+                /* Transition both the width, opacity and transform properties */
+                transition: width 0.5s, opacity 0.5s, transform 0.5s; 
+            }    
+        }
+
+        .hide-desktop {
+            display: none;
+        }
+
+        // The styles for the menu-container-main
+        .menu-container-main {
+            // Using display: flex; makes the container a flex container and its children flex items.
+            display: flex;
+            // This makes the main axis vertical and lays out the flex items in a column.
+            flex-direction: column;
+            // This adds some space between the flex items.
+            gap: 147px;
+
+            margin-top: 27px;
+        }
+
+    }
+
 
     

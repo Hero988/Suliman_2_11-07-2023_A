@@ -354,4 +354,205 @@
         @extend .card-header; 
         right: 109px;
     }
+
+    // mixin for PC screens     
+    @include PC {
+        // Style for the city container 
+        .city-container {
+            // Center the content (Using a mixin)
+            @include flexCenter(row);
+
+            margin: 10px;
+            padding: 10px;
+
+            // This is used to make the container occupy the full height of its parent
+            height: fit-content;
+
+            width: max-content;
+
+            // This adds a background color to the city container
+            background-color: white;
+
+        }
+
+        // Style for the city text
+        .city-text {
+            //Changes the color of the text
+            color: #4B4B4B;
+
+            // Using the function to change the font-weight
+            font-weight: weight(bold);
+
+            // sets the position of the city text relative to its normal position.
+            position: relative;
+
+            font-size: 25px;
+
+            // moves the city text up
+            top: -10px;
+
+            // moves the city text left
+            left: 77px;
+
+            // adds space at the bottom
+            padding-bottom: 10px;
+        }
+
+        // Style for the location-dot icon 
+        .location-dot-custom {
+            // sets the position of the location-dot text relative to its normal position.
+            position: relative;
+
+            font-size: 25px;
+
+            //moves the location-dot up
+            top:-15px;
+
+            //moves the location-dot right
+            right:134px;
+        }
+        
+        #restaurants-section {
+        // Center the content (Using a mixin)
+        @include flexCenter(column);
+
+        // This is used to make the container occupy the full height of its parent 
+        height: 100%;  
+
+        // This adds a background color to the city container
+        background-color: $background-color;
+
+        padding: 36px 0; /* Adds 20px padding to the top and bottom */
+        padding-top: 100px;
+        }
+        
+            .section-title-restaurant {
+                position: relative;
+                right: 786px;
+                // Adjust the size, color, margin, etc. as needed 
+                font-size: 24px;
+                // Using the function to change the font-weight
+                font-weight: weight(bold);
+                bottom: 20px;
+                position: relative;
+                top:-51px;
+            }
+        
+            .cards-container-restaurant {
+                // Center the content (Using a mixin)
+                @include flexCenter(row);
+                // Add some space between the cards 
+                gap: 20px;
+            }
+        
+            .card-image {
+                position: relative;
+                width: 370px; // This will make the image cover the full width of the .card-restaurant
+                height: 186px; // This will make the image height to be 50% of .card-restaurant height
+                object-fit: cover; // This will make the image cover the entire area of the .card-image, cropping it if necessary
+                object-position: center; // This will center the image within the .card-image
+                border-top-left-radius: 15px; // This will give the top left corner a 15px radius
+                border-top-right-radius: 15px; // This will give the top right corner a 15px radius
+                top: -21px;
+            }
+            
+            .card-restaurant {
+                // Center the content (Using a mixin)
+                @include flexCenter(column);
+        
+                // Add background color (using the varible $background-color) and rounded corners 
+                background-color: $background-color;
+                border-radius: 30px;
+        
+                // Add padding around the content inside the card 
+                padding: 10px;
+        
+                // Add a shadow border. Adjust the values as needed 
+                // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+                
+                position: relative; // This is required for positioning the 'card-new' absolutely.
+                width: 350px;
+                height: 218px; 
+                background-color: #FFFFFF;
+                margin: 30px;  // Adds space of 20px around each side of the card.
+                padding-bottom: 0px;
+            }
+        
+            // The styles for the new card.
+            .card-new {
+                position: absolute; 
+                z-index: 9999; // This positions the card-new on top of all other elements.
+                
+                top: 1100px;
+                right: 1670px;
+        
+                width: 110px;
+                height: 35px;
+                
+                // Center the content (Using a mixin)
+                @include flexCenter(column);
+        
+                background-color: $tertiary-color;
+                
+                // This sets the border radius to 5px to give the card rounded corners.
+                border-radius: 5px;
+                
+                // This sets the font size of the text inside the card.
+                font-size: 16px;
+                
+                // This sets the font weight of the text inside the card.
+                font-weight: bold;
+        
+                // Set the margin and padding to 0 to remove any space around the card.
+                margin: 0;
+                padding: 0;
+            }
+        
+            .card-new-text {
+                color: #008766;
+            }
+        
+            .card-new-2 {
+                @extend .card-new;
+                top: 1100px;
+                right: 1232px;
+            }
+        
+        
+            a { 
+                // Target all anchor tags within .card-header
+                color: inherit; // Resets the color to inherit from its parent
+                text-decoration: none; // Removes the underline
+                cursor: pointer; // Ensures the cursor changes to a hand icon when hovering over the
+            }  
+            .card-header {
+                @extend .card-text-how-it-works;
+                font-size: 20px;
+                top: -8px;
+                right:102px;
+            } 
+        
+            .card-text-restaurants {
+                position: relative;
+                font-size: 20px;
+                right: -16px;
+                top: -1px;
+            }
+        
+            .card-header-2 {
+                @extend .card-header; 
+                right: 79px;
+            }
+        
+            .card-header-3 {
+                @extend .card-header; 
+                right: 135px;
+            }
+        
+            .card-header-4 {
+                @extend .card-header; 
+                right: 109px;
+            }
+    }
     
