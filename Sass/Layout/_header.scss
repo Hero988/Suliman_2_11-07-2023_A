@@ -1,66 +1,66 @@
-
 // Header of all the webpages
-    // Style for the logo image
-        .logo img{
-            //This is used to convert the image into a block element 
-            display: block;  
-            
-            //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
-            margin: auto;    
-    
-            //This is used to make sure that the image will scale to the width of its container.
-            width: 40%;
-    
-            //This adds space above the logo image
-            padding-top: 5%;
-    
-            //This adds space below the logo image
-            padding-bottom: 5%;
-        }
-    
-        /* Style for the logo container */
-        .logo {
-            //This will add a shadow effect below the container 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    
-            // Using the mixin flexCenter (row is using the argument)
-            @include flexCenter(row);
-    
-            // This is used to make the container occupy the full height of its parent 
-            height: 100%;
-    
-        }
 
-    // mixin for PC screens     
-    @include PC {
-        .logo img{
+// Style for the logo image
+.logo img {
+    // This makes the image display as a block element, which means it will start on a new line and take up the full width available.
+    display: block;
 
-            position: relative;
-            
-            //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
-            margin: auto;   
+    // This centers the image by automatically setting the left and right margins to equal values.
+    margin: auto;
 
-            width: fit-content;
+    // This scales the width of the image to be 40% of its container.
+    width: 40%;
 
-            height: fit-content;
+    // This adds space above the logo image.
+    padding-top: 5%;
 
-            right: -145px;
-    
-        }
-    
-        /* Style for the logo container */
-        .logo {
+    // This adds space below the logo image.
+    padding-bottom: 5%;
+}
 
-            box-shadow: none;
-    
-            // Using the mixin flexCenter (row is using the argument)
-            @include flexCenter(row);
+// Style for the logo container
+.logo {
+    // This adds a shadow effect below the container to give it some depth.
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
-            width: fit-content;
+    // This applies the mixin 'flexCenter' with argument 'row', which centers the content of the container.
+    @include flexCenter(row);
 
-            height: fit-content;
+    // This sets the height of the container to be 100% of its parent.
+    height: 100%;
+}
 
-    
-        }
+// Styles applied for PC screens
+@include PC {
+    .logo img {
+        // The image is positioned relative to its normal position.
+        position: relative;
+
+        // The image is centered horizontally within its container.
+        margin: auto;
+
+        // The image width fits the content it holds.
+        width: fit-content;
+
+        // The image height fits the content it holds.
+        height: fit-content;
+
+        // The image is moved to the right.
+        right: -145px;
     }
 
+    // Style for the logo container on PC screens
+    .logo {
+        // The shadow effect is removed for PC screens.
+        box-shadow: none;
+
+        // The content of the container is centered.
+        @include flexCenter(row);
+
+        // The width of the container fits the content it holds.
+        width: fit-content;
+
+        // The height of the container fits the content it holds.
+        height: fit-content;
+    }
+}

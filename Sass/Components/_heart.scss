@@ -1,56 +1,84 @@
-
 // Style for the FontAwesome heart icon
 .heart-custom {
+    // Position the icon relative to its normal position
     position: relative;
+    
+    // Set the color of the icon
     color: #000000;
+    
+    // Set the size of the icon
     font-size: 30px;
+    
+    // Move the icon up
     top:-44px;
+    
+    // Move the icon to the right
     right: -139px;
+    
+    // Style the icon when it is hovered over
     &:hover {
+        // Make the icon transparent
         opacity: 0;
+        
+        // Change the color of the icon
         color: #FFFFFF;
     }
 
+    // Style the icon when it is clicked
     &:active {
+        // Make the icon transparent
         opacity: 0;
+        
+        // Change the color of the icon
         color: #FFFFFF;
     }
 }
 
+// Style for the second heart icon
 .heart-custom-2 {
+    // Position the icon relative to its normal position
     position: relative;
+    
+    // Set the size of the icon
     font-size: 30px;
+    
+    // Move the icon up
     top:-74px;
+    
+    // Move the icon to the right
     right: -139px;
 
-    /* Apply a linear gradient as the background */
+    // Apply a linear gradient as the background 
     background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
     background: linear-gradient(to right, #FF79DA, #9356DC);
     
-    /* Apply the background to the text */
+    // Apply the background to the text using a text clipping effect
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     
-    /* Make the text color transparent */
+    // Make the text color transparent
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 
-    //initially sets the opacity to 0
+    // Initially sets the opacity to 0
     opacity: 0;
 
+    // Style the icon when it is hovered over
     &:hover {
+        // Make the icon visible
         opacity: 1;
-        /* adds a pointer*/
+        
+        // Change the cursor to a pointer
         cursor: pointer;
     }
 
+    // Style the icon when it is clicked
     &:active {
-        /* adds a pointer*/
+        // Change the cursor to a pointer
         cursor: pointer;
+        
+        // Make the icon visible
         opacity: 1;
     }
-
-  }
-  
-
+}

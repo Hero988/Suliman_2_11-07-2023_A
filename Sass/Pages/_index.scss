@@ -1,665 +1,772 @@
+// Style for the city container
+.city-container {
+    // Center the content horizontally and vertically using a mixin.
+    @include flexCenter(row);
 
-    // Style for the city container 
+    // Make the container occupy the full height of its parent.
+    height: 100%;
+
+    // Add space above the city container.
+    padding-top: 5%;
+
+    // Set the background color of the city container.
+    background-color: #EAEAEA;
+
+    // Add a 5px space above the city container.
+    margin-top: 5px;
+}
+
+// Style for the city text
+.city-text {
+    // Set the color of the text.
+    color: #4B4B4B;
+
+    // Set the font weight using a function.
+    font-weight: weight(bold);
+
+    // Set the position of the city text relative to its normal position.
+    position: relative;
+
+    // Move the city text up by 10px.
+    top: -10px;
+
+    // Move the city text to the left by 10px.
+    left: 10px;
+
+    // Add space at the bottom of the text.
+    padding-bottom: 10px;
+}
+
+// Style for the location-dot icon
+.location-dot-custom {
+    // Set the position of the location-dot relative to its normal position.
+    position: relative;
+
+    // Move the location-dot up by 15px.
+    top:-15px;
+
+    // Move the location-dot to the right by 125px.
+    right:125px;
+}
+
+// Style for the menu container
+.menu-content-container {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Make the container occupy the full height of its parent.
+    height: 100%;  
+
+    // Set the background color of the menu container using a variable.
+    background-color: $background-color;
+}
+
+// Style for the menu text container
+.menu-text-containter {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+}
+
+// Style for the "picked for you" text 
+.menu-text-picked {
+    // Move the text up by 20px.
+    margin-top: -20px;
+}
+
+// Style for each menu row
+.menu-row {
+    // Add 10px of space around each row.
+    padding: 10px;
+
+    // Add 20px of space between rows.
+    margin: 20px 0;
+}
+
+// Style for the "Book the menu you like" header
+.menu-header {
+    // Set the font size to 28px.
+    font-size: 28px;
+
+    // Set the font weight using a function.
+    font-weight: weight(bold);
+}
+
+// Style for the "Discover top-of-the-art restaurants we picked for you" text
+.menu-text {
+    // Set the font size to 18px.
+    font-size: 18px;
+}
+
+// Style for the 'How it works' container
+.how-it-works-container {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Add 80px of space at the top of the container.
+    padding-top: 80px;
+
+    // Add 120px of space at the bottom of the container.
+    padding-bottom: 120px;
+}
+
+// Style for the section title
+.section-title {
+    // Set the position of the section title relative to its normal position.
+    position: relative;
+
+    // Move the section title to the right by 120px.
+    right: 120px;
+
+    // Set the font size to 24px.
+    font-size: 24px;
+
+    // Set the font weight using a function.
+    font-weight: weight(bold);
+
+    // Move the section title down by 20px.
+    bottom: 20px;
+}
+
+// Style for the card container
+.cards-container {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Add 20px of space between the cards.
+    gap: 20px;
+}
+
+// Style for each individual card
+.card {
+    // Set the width of the card to 350px.
+    width: 350px;
+
+    // Set the height of the card to 50px.
+    height: 50px;
+
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Set the background color using a variable.
+    background-color: $background-color;
+
+    // Set the border radius to 30px to round the corners of the card.
+    border-radius: 30px;
+
+    // Add 10px of padding around the content inside the card.
+    padding: 10px;
+
+    // Add a shadow border. The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color.
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+// Extend the styles from .card to .card3 and change the background color.
+#{&}.card3 {
+    // Extend all the styles from .card.
+    @extend .card;
+
+    // Change the background color.
+    background-color: #F5EDFF;
+}
+
+// Style for the icon container within each card
+.icon-container {
+    // Display the number and icon in a row.
+    display: flex;
+
+    // Align the items in the center along the cross axis.
+    align-items: center;
+
+    // Distribute the items evenly along the main axis.
+    justify-content: space-between;
+
+    // Set the width to 100%.
+    width: 100%;
+}
+
+// Style for the card number
+.card-number {
+    // Set the position of the card number relative to its normal position.
+    position: relative;
+
+    // Set the font size to 16px.
+    font-size: 16px;
+
+    // Set the color of the text.
+    color: white;
+
+    // Move the card number down by 15px.
+    top: 15px;
+
+    // Move the card number to the left by 19px.
+    left: -19px;
+    
+    // Add 10px of padding around the number.
+    padding: 10px;
+
+    // Set the background color using a variable.
+    background-color: $primary-color;
+
+    // Set the border radius to 50% to create a circular shape.
+    border-radius: 50%;
+
+    // Center the text within the circle using flexbox properties.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Set the width and height to 5px to maintain a circular shape.
+    width: 5px;
+    height: 5px;
+}
+
+// Style for the card text
+.card-text-how-it-works {
+    // Set the position of the card text relative to its normal position.
+    position: relative;
+
+    // Set the font size to 18px.
+    font-size: 18px;
+
+    // Set the font weight using a function.
+    font-weight: weight(bold);
+
+    // Center the text.
+    text-align: center;
+
+    // Move the card text up by 13px.
+    top: -13px;
+
+    // Move the card text to the right by 82px.
+    right: -82px;
+}
+
+// Style for the custom icon
+.custom-icon-style {
+    // Set the position of the custom icon relative to its normal position.
+    position: relative;
+
+    // Set the color of the icon.
+    color: #7E7E7E;
+
+    // Move the custom icon to the right by 300px.
+    right: 300px;
+
+    // Move the custom icon down by 15px.
+    top: 15px;
+
+    // Set the font size to 23px.
+    font-size: 23px;
+}
+
+// Style for the custom store icon
+.custom-store-icon-style {
+    // Set the position of the custom store icon relative to its normal position.
+    position: relative;
+
+    // Set the color of the store icon using a variable.
+    color: $primary-color;
+
+    // Move the custom store icon to the right by 301px.
+    right: 301px;
+
+    // Move the custom store icon down by 17px.
+    top: 17px;
+
+    // Set the font size to 21px.
+    font-size: 21px;
+}
+
+// Style for the card text for restaurant
+.card-text-restaurant {
+    // Extend the styles from .card-text-how-it-works.
+    @extend .card-text-how-it-works;
+
+    // Move the card text up by 10px.
+    top: -10px;
+
+    // Move the card text to the right by 77px.
+    right: -77px;
+}
+
+// Style for the restaurants section
+#restaurants-section {
+    // Extend the styles from .menu-content-container.
+    @extend .menu-content-container;
+
+    // Add 36px of padding at the top and bottom.
+    padding: 36px 0;
+
+    // Add 100px of padding at the top.
+    padding-top: 100px;
+}
+
+// Style for the section title for restaurant
+.section-title-restaurant {
+    // Set the position of the section title relative to its normal position.
+    position: relative;
+
+    // Move the section title to the right by 120px.
+    right: 120px;
+
+    // Set the font size to 24px.
+    font-size: 24px;
+
+    // Set the font weight using a function.
+    font-weight: weight(bold);
+
+    // Move the section title down by 20px.
+    bottom: 20px;
+
+    // Move the section title up by 51px.
+    top:-51px;
+}
+
+// Style for the cards container for restaurant
+.cards-container-restaurant {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Add 20px of space between the cards.
+    gap: 20px;
+}
+
+// Style for the card image
+.card-image {
+    // Set the position of the card image relative to its normal position.
+    position: relative;
+
+    // Set the width of the card image to 370px.
+    width: 370px;
+
+    // Set the height of the card image to 186px.
+    height: 186px;
+
+    // Make the image cover the entire area of the .card-image, cropping it if necessary.
+    object-fit: cover;
+
+    // Center the image within the .card-image.
+    object-position: center;
+
+    // Give the top left corner a 15px radius.
+    border-top-left-radius: 15px;
+
+    // Give the top right corner a 15px radius.
+    border-top-right-radius: 15px;
+
+    // Move the card image up by 21px.
+    top: -21px;
+}
+
+// Style for the restaurant card
+.card-restaurant {
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Set the background color using a variable.
+    background-color: $background-color;
+
+    // Set the border radius to 30px to round the corners of the card.
+    border-radius: 30px;
+
+    // Add 10px of padding around the content inside the card.
+    padding: 10px;
+
+    // Add a shadow border. The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color.
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+    // Set the position of the card relative to its normal position.
+    position: relative;
+
+    // Set the width of the card to 350px.
+    width: 350px;
+
+    // Set the height of the card to 218px.
+    height: 218px; 
+
+    // Set the background color of the card to white.
+    background-color: #FFFFFF;
+
+    // Add 30px of margin around each side of the card.
+    margin: 30px;
+
+    // Remove padding from the bottom of the card.
+    padding-bottom: 0px;
+}
+
+// Style for the new card
+.card-new {
+    // Set the position of the new card relative to its normal position.
+    position: absolute; 
+
+    // Position the new card on top of all other elements.
+    z-index: 9999; 
+
+    // Move the new card down by 1038px.
+    top: 1038px;
+
+    // Move the new card to the right by 31px.
+    right: 31px;
+
+    // Set the width of the new card to 110px.
+    width: 110px;
+
+    // Set the height of the new card to 35px.
+    height: 35px;
+    
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Set the background color using a variable.
+    background-color: $tertiary-color;
+
+    // Set the border radius to 5px to give the card rounded corners.
+    border-radius: 5px;
+
+    // Set the font size of the text inside the card to 16px.
+    font-size: 16px;
+
+    // Set the font weight of the text inside the card to bold.
+    font-weight: bold;
+
+    // Remove any space around the card by setting margin and padding to 0.
+    margin: 0;
+    padding: 0;
+}
+
+// Style for the new card text
+.card-new-text {
+    // Set the color of the text to #008766.
+    color: #008766;
+}
+
+// Style for the second new card
+.card-new-2 {
+    // Set the position of the new card relative to its normal position.
+    position: absolute; 
+
+    // Position the new card on top of all other elements.
+    z-index: 9999; 
+
+    // Move the new card down by 1348px.
+    top: 1348px;
+
+    // Move the new card to the right by 31px.
+    right: 31px;
+
+    // Set the width of the new card to 110px.
+    width: 110px;
+
+    // Set the height of the new card to 35px.
+    height: 35px;
+    
+    // Center the content vertically using a mixin.
+    @include flexCenter(column);
+
+    // Set the background color using a variable.
+    background-color: $tertiary-color;
+
+    // Set the border radius to 5px to give the card rounded corners.
+    border-radius: 5px;
+
+    // Set the font size of the text inside the card to 16px.
+    font-size: 16px;
+
+    // Set the font weight of the text inside the card to bold.
+    font-weight: bold;
+
+    // Remove any space around the card by setting margin and padding to 0.
+    margin: 0;
+    padding: 0;
+}
+
+// Style for all anchor tags within .card-header
+a { 
+    // Reset the color to inherit from its parent.
+    color: inherit;
+
+    // Remove the underline.
+    text-decoration: none;
+
+    // Ensure the cursor changes to a hand icon when hovering over the link.
+    cursor: pointer; 
+}  
+
+// Style for the card header
+.card-header {
+    // Extend the styles from .card-text-how-it-works.
+    @extend .card-text-how-it-works;
+
+    // Set the font size to 20px.
+    font-size: 20px;
+
+    // Move the card header up by 8px.
+    top: -8px;
+
+    // Move the card header to the right by 102px.
+    right:102px;
+} 
+
+// Style for the card text for restaurants
+.card-text-restaurants {
+    // Set the position of the card text relative to its normal position.
+    position: relative;
+
+    // Set the font size to 20px.
+    font-size: 20px;
+
+    // Move the card text to the right by 16px.
+    right: -16px;
+
+    // Move the card text down by 1px.
+    top: -1px;
+}
+
+// Style for the second card header
+.card-header-2 {
+    // Extend the styles from .card-header.
+    @extend .card-header; 
+
+    // Move the card header to the right by 79px.
+    right: 79px;
+}
+
+// Style for the third card header
+.card-header-3 {
+    // Extend the styles from .card-header.
+    @extend .card-header; 
+
+    // Move the card header to the right by 135px.
+    right: 135px;
+}
+
+// Style for the fourth card header
+.card-header-4 {
+    // Extend the styles from .card-header.
+    @extend .card-header; 
+
+    // Move the card header to the right by 109px.
+    right: 109px;
+}
+
+// Define a mixin for PC screens
+@include PC {
+    // Style for the city container
     .city-container {
-        // Center the content (Using a mixin)
+        // Center the content using a mixin.
         @include flexCenter(row);
 
-        // This is used to make the container occupy the full height of its parent
-        height: 100%;
+        // Add 10px of margin around the container.
+        margin: 10px;
 
-        // This adds space above the city container
-        padding-top: 5%;
+        // Add 10px of padding inside the container.
+        padding: 10px;
 
-        // This adds a background color to the city container
-        background-color: #EAEAEA;
+        // Make the container's height fit its content.
+        height: fit-content;
 
-        // Adds a space of 5px above the city container
-        margin-top: 5px;
+        // Make the container's width as large as possible.
+        width: max-content;
+
+        // Set the background color to white.
+        background-color: white;
     }
 
     // Style for the city text
     .city-text {
-        //Changes the color of the text
+        // Set the color of the text.
         color: #4B4B4B;
 
-        // Using the function to change the font-weight
+        // Set the font weight using a function.
         font-weight: weight(bold);
 
-        // sets the position of the city text relative to its normal position.
+        // Set the position of the city text relative to its normal position.
         position: relative;
 
-        // moves the city text up
+        // Set the font size to 25px.
+        font-size: 25px;
+
+        // Move the city text up by 10px.
         top: -10px;
 
-        // moves the city text left
-        left: 10px;
+        // Move the city text to the right by 77px.
+        left: 77px;
 
-        // adds space at the bottom
+        // Add 10px of padding at the bottom.
         padding-bottom: 10px;
     }
 
-    // Style for the location-dot icon 
+    // Style for the location-dot icon
     .location-dot-custom {
-        // sets the position of the location-dot text relative to its normal position.
+        // Set the position of the location-dot icon relative to its normal position.
         position: relative;
 
-        //moves the location-dot up
+        // Set the font size to 25px.
+        font-size: 25px;
+
+        // Move the location-dot icon up by 15px.
         top:-15px;
 
-        //moves the location-dot right
-        right:125px;
+        // Move the location-dot icon to the right by 134px.
+        right:134px;
     }
 
-
-    // Style for the menu container 
-    .menu-content-container {
-        // Center the content (Using a mixin)
+    // Style for the restaurants section
+    #restaurants-section {
+        // Center the content vertically using a mixin.
         @include flexCenter(column);
 
-        // This is used to make the container occupy the full height of its parent 
+        // Make the container's height fit its content.
         height: 100%;  
 
-        // This adds a background color to the city container
+        // Set the background color using a variable.
         background-color: $background-color;
-    }
 
-    // Style for the menu text container
-    .menu-text-containter{
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-    }
+        // Add 36px of padding at the top and bottom.
+        padding: 36px 0;
 
-    // This is for the "picked for you" text 
-    .menu-text-picked {
-        // Moves the text up
-        margin-top: -20px;
-    }
-
-    /* Style for each row */
-    .menu-row {
-        // The following line is used to add some space around each row.
-        padding: 10px;
-
-        // The following line is used to add some space between rows.
-        margin: 20px 0;
-    }
-
-    // Style for the "Book the menu you like" 
-    .menu-header {
-        // Sets the size of the font to 23px
-        font-size: 28px;
-
-        // Using the function to change the font-weight
-        font-weight: weight(bold);
-    }
-
-    // Style for the "Discover top-of-the-art restaurants we picked for you" 
-    .menu-text {
-        // Sets the size of the font to 18px
-        font-size: 18px;
-    }
-
-
-    // Styling for the 'How it works' container 
-    .how-it-works-container {
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-        padding-top: 80px;
-        padding-bottom: 120px;
-    }
-
-    // Styling for the section title 
-    .section-title {
-        position: relative;
-        right: 120px;
-        // Adjust the size, color, margin, etc. as needed 
-        font-size: 24px;
-        // Using the function to change the font-weight
-        font-weight: weight(bold);
-        bottom: 20px;
-    }
-
-    // Styling for the card container 
-    .cards-container {
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-        // Add some space between the cards 
-        gap: 20px;
-    }
-
-    // Styling for each individual card 
-    .card {
-        // Set the card dimensions 
-        width: 350px;
-        height: 50px;
-
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-
-        // Add background color (using the varible $background-color) and rounded corners 
-        background-color: $background-color;
-        border-radius: 30px;
-
-        // Add padding around the content inside the card 
-        padding: 10px;
-
-        // Add a shadow border. Adjust the values as needed 
-        // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    // The element that we extend it too will inherit all the styles from the selected element
-    // We want to extend all the styles in .card onto .card3 so we just want to change the background-color 
-    #{&}.card3 {
-        // So here we are using all the styles from card
-        @extend .card;
-        // We are just changing the background color:
-        background-color: #F5EDFF;
-    }
-
-    // Styling for the icon container within each card
-    .icon-container {
-        // Display the number and icon in a row
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    // Styling for the card number 
-    .card-number {
-
-        position: relative;
-        // Adjust the size, color, etc. as needed
-        font-size: 16px;
-        color: white;
-
-        top: 15px;
-        left: -19px;
-        
-        // Create a circular background with padding and border-radius
-        padding: 10px;
-        background-color: $primary-color;
-        border-radius: 50%; // This will create a circular shape
-
-        // Center the text within the circle using flexbox properties
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        // Ensure the width and height are the same to maintain circular shape. Adjust as needed.
-        width: 5px;
-        height: 5px;
-    }
-
-    // Styling for the card text
-    .card-text-how-it-works {
-        // Adjust the size, color, etc. as needed
-        position: relative;
-        font-size: 18px;
-        font-weight: weight(bold);
-        text-align: center;
-        top: -13px;
-        right: -82px;
-    }
-
-    .custom-icon-style {
-        position: relative;
-        color: #7E7E7E;
-        right: 300px;
-        top: 15px;
-        font-size: 23px;
-    }
-
-    .custom-store-icon-style {
-        position: relative;
-        color: $primary-color;
-        right: 301px;
-        top: 17px;
-        font-size: 21px;
-    }
-
-    .card-text-restaurant {
-    // Adjust the size, color, etc. as needed
-        // So here we are using all the styles from card
-        @extend .card-text-how-it-works;
-        // We are just changing the margins
-        top: -10px;
-        right: -77px;
-    }
-
-    #restaurants-section {
-        // So here we are using all the styles from .menu-content-container
-        @extend .menu-content-container;
-        padding: 36px 0; /* Adds 20px padding to the top and bottom */
+        // Add 100px of padding at the top.
         padding-top: 100px;
     }
 
+    // Style for the section title for restaurant
     .section-title-restaurant {
-        @extend .section-title;
+        // Set the position of the section title relative to its normal position.
         position: relative;
+
+        // Move the section title to the right by 140px.
+        right: 140px;
+
+        // Set the font size to 30px.
+        font-size: 30px;
+
+        // Set the font weight using a function.
+        font-weight: weight(bold);
+
+        // Move the section title down by 20px.
+        bottom: 20px;
+
+        // Move the section title up by 51px.
         top:-51px;
     }
 
+    // Style for the cards container for restaurant
     .cards-container-restaurant {
-        @extend .cards-container;
-    }
-
-    .card-image {
-        position: relative;
-        width: 370px; // This will make the image cover the full width of the .card-restaurant
-        height: 186px; // This will make the image height to be 50% of .card-restaurant height
-        object-fit: cover; // This will make the image cover the entire area of the .card-image, cropping it if necessary
-        object-position: center; // This will center the image within the .card-image
-        border-top-left-radius: 15px; // This will give the top left corner a 15px radius
-        border-top-right-radius: 15px; // This will give the top right corner a 15px radius
-        top: -21px;
-    }
-    
-    .card-restaurant {
-        // Center the content (Using a mixin)
+        // Center the content vertically using a mixin.
         @include flexCenter(column);
 
-        // Add background color (using the varible $background-color) and rounded corners 
-        background-color: $background-color;
-        border-radius: 30px;
+        // Add 20px of space between the cards.
+        gap: 20px;
+    }
+} 
 
-        // Add padding around the content inside the card 
+// Define a mixin for tablet screens
+@media (min-width: 768px) and (max-width: 990px) { 
+    // Style for the city container
+    .city-container {
+        // Center the content using a mixin.
+        @include flexCenter(row);
+
+        // Add 10px of margin around the container.
+        margin: 10px;
+
+        // Add 10px of padding inside the container.
         padding: 10px;
 
-        // Add a shadow border. Adjust the values as needed 
-        // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-        
-        position: relative; // This is required for positioning the 'card-new' absolutely.
-        width: 350px;
-        height: 218px; 
-        background-color: #FFFFFF;
-        margin: 30px;  // Adds space of 20px around each side of the card.
-        padding-bottom: 0px;
+        // Make the container's height fit its content.
+        height: fit-content;
+
+        // Make the container's width as large as possible.
+        width: max-content;
+
+        // Set the background color to white.
+        background-color: white;
     }
 
-    // The styles for the new card.
-    .card-new {
-        position: absolute; 
-        z-index: 9999; // This positions the card-new on top of all other elements.
-        
-        top: 1038px;
-        right: 31px;
+    // Style for the city text
+    .city-text {
+        // Set the color of the text.
+        color: #4B4B4B;
 
-        width: 110px;
-        height: 35px;
-        
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
+        // Set the font weight using a function.
+        font-weight: weight(bold);
 
-        background-color: $tertiary-color;
-        
-        // This sets the border radius to 5px to give the card rounded corners.
-        border-radius: 5px;
-        
-        // This sets the font size of the text inside the card.
-        font-size: 16px;
-        
-        // This sets the font weight of the text inside the card.
-        font-weight: bold;
-
-        // Set the margin and padding to 0 to remove any space around the card.
-        margin: 0;
-        padding: 0;
-    }
-
-    .card-new-text {
-        color: #008766;
-    }
-
-    .card-new-2 {
-        position: absolute; 
-        z-index: 9999; // This positions the card-new on top of all other elements.
-        
-        top: 1348px;
-        right: 31px;
-
-        width: 110px;
-        height: 35px;
-        
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-
-        background-color: $tertiary-color;
-        
-        // This sets the border radius to 5px to give the card rounded corners.
-        border-radius: 5px;
-        
-        // This sets the font size of the text inside the card.
-        font-size: 16px;
-        
-        // This sets the font weight of the text inside the card.
-        font-weight: bold;
-
-        // Set the margin and padding to 0 to remove any space around the card.
-        margin: 0;
-        padding: 0;
-    }
-
-
-    a { 
-        // Target all anchor tags within .card-header
-        color: inherit; // Resets the color to inherit from its parent
-        text-decoration: none; // Removes the underline
-        cursor: pointer; // Ensures the cursor changes to a hand icon when hovering over the
-    }  
-    .card-header {
-        @extend .card-text-how-it-works;
-        font-size: 20px;
-        top: -8px;
-        right:102px;
-    } 
-
-    .card-text-restaurants {
+        // Set the position of the city text relative to its normal position.
         position: relative;
-        font-size: 20px;
-        right: -16px;
-        top: -1px;
+
+        // Set the font size to 25px.
+        font-size: 25px;
+
+        // Move the city text up by 10px.
+        top: -10px;
+
+        // Move the city text to the right by 77px.
+        left: 77px;
+
+        // Add 10px of padding at the bottom.
+        padding-bottom: 10px;
     }
 
-    .card-header-2 {
-        @extend .card-header; 
-        right: 79px;
+    // Style for the location-dot icon
+    .location-dot-custom {
+        // Set the position of the location-dot icon relative to its normal position.
+        position: relative;
+
+        // Set the font size to 25px.
+        font-size: 25px;
+
+        // Move the location-dot icon up by 15px.
+        top:-15px;
+
+        // Move the location-dot icon to the right by 134px.
+        right:134px;
     }
 
-    .card-header-3 {
-        @extend .card-header; 
-        right: 135px;
-    }
-
-    .card-header-4 {
-        @extend .card-header; 
-        right: 109px;
-    }
-
-    // mixin for PC screens     
-    @include PC {
-        // Style for the city container 
-        .city-container {
-            // Center the content (Using a mixin)
-            @include flexCenter(row);
-
-            margin: 10px;
-            padding: 10px;
-
-            // This is used to make the container occupy the full height of its parent
-            height: fit-content;
-
-            width: max-content;
-
-            // This adds a background color to the city container
-            background-color: white;
-
-        }
-
-        // Style for the city text
-        .city-text {
-            //Changes the color of the text
-            color: #4B4B4B;
-
-            // Using the function to change the font-weight
-            font-weight: weight(bold);
-
-            // sets the position of the city text relative to its normal position.
-            position: relative;
-
-            font-size: 25px;
-
-            // moves the city text up
-            top: -10px;
-
-            // moves the city text left
-            left: 77px;
-
-            // adds space at the bottom
-            padding-bottom: 10px;
-        }
-
-        // Style for the location-dot icon 
-        .location-dot-custom {
-            // sets the position of the location-dot text relative to its normal position.
-            position: relative;
-
-            font-size: 25px;
-
-            //moves the location-dot up
-            top:-15px;
-
-            //moves the location-dot right
-            right:134px;
-        }
-        
-        #restaurants-section {
-        // Center the content (Using a mixin)
+    // Style for the restaurants section
+    #restaurants-section {
+        // Center the content vertically using a mixin.
         @include flexCenter(column);
 
-        // This is used to make the container occupy the full height of its parent 
+        // Make the container's height fit its content.
         height: 100%;  
 
-        // This adds a background color to the city container
+        // Set the background color using a variable.
         background-color: $background-color;
 
-        padding: 36px 0; /* Adds 20px padding to the top and bottom */
+        // Add 36px of padding at the top and bottom.
+        padding: 36px 0;
+
+        // Add 100px of padding at the top.
         padding-top: 100px;
-        }
-        
-            .section-title-restaurant {
-                position: relative;
-                right: 786px;
-                // Adjust the size, color, margin, etc. as needed 
-                font-size: 24px;
-                // Using the function to change the font-weight
-                font-weight: weight(bold);
-                bottom: 20px;
-                position: relative;
-                top:-51px;
-            }
-        
-            .cards-container-restaurant {
-                // Center the content (Using a mixin)
-                @include flexCenter(row);
-                // Add some space between the cards 
-                gap: 20px;
-            }
-        
-            .card-image {
-                position: relative;
-                width: 370px; // This will make the image cover the full width of the .card-restaurant
-                height: 186px; // This will make the image height to be 50% of .card-restaurant height
-                object-fit: cover; // This will make the image cover the entire area of the .card-image, cropping it if necessary
-                object-position: center; // This will center the image within the .card-image
-                border-top-left-radius: 15px; // This will give the top left corner a 15px radius
-                border-top-right-radius: 15px; // This will give the top right corner a 15px radius
-                top: -21px;
-            }
-            
-            .card-restaurant {
-                // Center the content (Using a mixin)
-                @include flexCenter(column);
-        
-                // Add background color (using the varible $background-color) and rounded corners 
-                background-color: $background-color;
-                border-radius: 30px;
-        
-                // Add padding around the content inside the card 
-                padding: 10px;
-        
-                // Add a shadow border. Adjust the values as needed 
-                // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-                
-                position: relative; // This is required for positioning the 'card-new' absolutely.
-                width: 350px;
-                height: 218px; 
-                background-color: #FFFFFF;
-                margin: 30px;  // Adds space of 20px around each side of the card.
-                padding-bottom: 0px;
-            }
-        
-            // The styles for the new card.
-            .card-new {
-                position: absolute; 
-                z-index: 9999; // This positions the card-new on top of all other elements.
-                
-                top: 1100px;
-                right: 1670px;
-        
-                width: 110px;
-                height: 35px;
-                
-                // Center the content (Using a mixin)
-                @include flexCenter(column);
-        
-                background-color: $tertiary-color;
-                
-                // This sets the border radius to 5px to give the card rounded corners.
-                border-radius: 5px;
-                
-                // This sets the font size of the text inside the card.
-                font-size: 16px;
-                
-                // This sets the font weight of the text inside the card.
-                font-weight: bold;
-        
-                // Set the margin and padding to 0 to remove any space around the card.
-                margin: 0;
-                padding: 0;
-            }
-        
-            .card-new-text {
-                color: #008766;
-            }
-        
-            .card-new-2 {
-                position: absolute; 
-                z-index: 9999; // This positions the card-new on top of all other elements.
-                
-                top: 1100px;
-                right: 1232px;
-        
-                width: 110px;
-                height: 35px;
-                
-                // Center the content (Using a mixin)
-                @include flexCenter(column);
-        
-                background-color: $tertiary-color;
-                
-                // This sets the border radius to 5px to give the card rounded corners.
-                border-radius: 5px;
-                
-                // This sets the font size of the text inside the card.
-                font-size: 16px;
-                
-                // This sets the font weight of the text inside the card.
-                font-weight: bold;
-        
-                // Set the margin and padding to 0 to remove any space around the card.
-                margin: 0;
-                padding: 0;
-            }
-        
-        
-            a { 
-                // Target all anchor tags within .card-header
-                color: inherit; // Resets the color to inherit from its parent
-                text-decoration: none; // Removes the underline
-                cursor: pointer; // Ensures the cursor changes to a hand icon when hovering over the
-            }  
-            .card-header {
-                @extend .card-text-how-it-works;
-                font-size: 20px;
-                top: -8px;
-                right:102px;
-            } 
-        
-            .card-text-restaurants {
-                position: relative;
-                font-size: 20px;
-                right: -16px;
-                top: -1px;
-            }
-        
-            .card-header-2 {
-                @extend .card-header; 
-                right: 79px;
-            }
-        
-            .card-header-3 {
-                @extend .card-header; 
-                right: 135px;
-            }
-        
-            .card-header-4 {
-                @extend .card-header; 
-                right: 109px;
-            }
     }
 
-    @media (min-width: 768px) and (max-width: 990px) {
-    // The styles for the new card.
-    .card-new {
-        position: absolute; 
-        z-index: 9999; // This positions the card-new on top of all other elements.
+    // Style for the section title for restaurant
+    .section-title-restaurant {
+        // Set the position of the section title relative to its normal position.
+        position: relative;
         
-        top: 1119px;
-        right: 236px;
+        // Move the section title to the right by 140px.
+        right: 140px;
 
-        width: 110px;
-        height: 35px;
-        
-        // Center the content (Using a mixin)
+        // Set the font size to 30px.
+        font-size: 30px;
+
+        // Set the font weight using a function.
+        font-weight: weight(bold);
+
+        // Move the section title down by 20px.
+        bottom: 20px;
+
+        // Move the section title up by 51px.
+        top:-51px;
+    }
+
+    // Style for the cards container for restaurant
+    .cards-container-restaurant {
+        // Center the content vertically using a mixin.
         @include flexCenter(column);
 
-        background-color: $tertiary-color;
-        
-        // This sets the border radius to 5px to give the card rounded corners.
-        border-radius: 5px;
-        
-        // This sets the font size of the text inside the card.
-        font-size: 16px;
-        
-        // This sets the font weight of the text inside the card.
-        font-weight: bold;
-
-        // Set the margin and padding to 0 to remove any space around the card.
-        margin: 0;
-        padding: 0;
+        // Add 20px of space between the cards.
+        gap: 20px;
     }
-
-    .card-new-2 {
-        position: absolute; 
-        z-index: 9999; // This positions the card-new on top of all other elements.
-        
-        top: 1441px;
-        right: 235px;
-
-        width: 110px;
-        height: 35px;
-        
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-
-        background-color: $tertiary-color;
-        
-        // This sets the border radius to 5px to give the card rounded corners.
-        border-radius: 5px;
-        
-        // This sets the font size of the text inside the card.
-        font-size: 16px;
-        
-        // This sets the font weight of the text inside the card.
-        font-weight: bold;
-
-        // Set the margin and padding to 0 to remove any space around the card.
-        margin: 0;
-        padding: 0;
-    }
-    }
-    
+}
