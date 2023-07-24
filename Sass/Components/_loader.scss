@@ -1,84 +1,58 @@
-// Styles for the loading overlay
+
+// The overlay that covers the entire screen while the spinner is visible.
 #loading-overlay {
-    // Fixed position allows the overlay to cover the entire screen
     position: fixed;
-    
-    // Position the overlay at the top left corner of the screen
     top: 0;
     left: 0;
-
-    // Make the overlay cover the entire width and height of the screen
     width: 100%;
     height: 100%;
-    
-    // Set the background to a semi-transparent black
     background: rgba(0, 0, 0, 0.7);
-    
-    // Display the overlay as a block element
     display: block;
-    
-    // Set a high z-index to make sure the overlay appears on top of other elements
     z-index: 1000;
-    
-    // Use the animation mixin to add an animation to hide the overlay after 2 seconds
+    // Use the animation mixin to add an animation to hide the overlay.
     @include animation(hideOverlay, 2s);
 }
 
-// Styles for the loading spinner
+// The spinner element itself.
 #loading-spinner {
-    // Fixed position allows the spinner to be positioned relative to the viewport
     position: fixed;
-    
-    // Position the spinner in the center of the screen
     top: 50%;
     left: 50%;
-    
-    // Adjust the position to make sure the center of the spinner is in the center of the screen
     margin-top: -25px;
     margin-left: -25px;
-    
-    // Set a higher z-index to make sure the spinner appears on top of the overlay
     z-index: 1001;
-    
-    // Display the spinner as a block element
     display: block;
-    
-    // Use the animation mixin to add an animation to hide the spinner after 4 seconds
+    // Use the animation mixin to add an animation to hide the spinner.
     @include animation(hideOverlay, 4s);
     
-    // Add a spinner style to the ::before pseudo-element
+    // Use the spinner mixin to style the spinner.
     &::before {
         @include spinner();
     }
 }
 
-// Styles for content that is hidden initially
+// Hide the main content initially.
 .hidden-initially {
-    // Set the initial opacity to 0 to hide the content
     opacity: 0;
-    
-    // Use the animation mixin to add an animation to show the content after a delay of 2 seconds
+    // Use the animation mixin to add an animation to show the content.
     @include animation(showContent, 2s, 2s);
 }
 
-// Define the keyframes for the spin animation
+// Define the keyframes for the spin animation.
 @include keyframes(spin) {
-    // A full rotation is equal to 1 turn
     transform: rotate(1turn);
 }
 
-// Define the keyframes for the hideOverlay animation
+// Define the keyframes for the hideOverlay animation.
 @include keyframes(hideOverlay) {
-    // Set the final opacity to 0 to hide the overlay
     opacity: 0;
-    
-    // Hide the overlay after the animation is finished
+    //disables the button when the animation is finished
     visibility: hidden;
     display: none; 
 }
 
-// Define the keyframes for the showContent animation
+// Define the keyframes for the showContent animation.
 @include keyframes(showContent) {
-    // Set the final opacity to 1 to show the content
     opacity: 1;
 }
+

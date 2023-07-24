@@ -1,164 +1,107 @@
-// Styles for the footer content container
+
+
 .footer-content-container {
-    // Use mixin to center content vertically and horizontally in column direction
+    // Center the content (Using a mixin)
     @include flexCenter(column);
     
-    // Set background color to a dark gray
+    // This adds a background color to the city container
     background-color: #353535;
 
-    // Add padding to the top and bottom of the container
     padding-top: 20px;
+
     padding-bottom: 50px;
 }
 
-// Styles for the footer container menu
 .footer-container-menu {
-    // Extend the styles from .footer-content-container
     @extend .footer-content-container;
 
-    // Adjust the top margin
     margin-top: -57px;
 
-    // Reset the bottom and top padding
     padding-bottom: 0px;
     padding-top: 0px;
+
 }
 
-// Styles for the footer container menu enchanted plate
 .footer-container-menu-enchanted-plate {
-    // Extend the styles from .footer-container-menu
     @extend .footer-container-menu;
-    
-    // Adjust the top margin
     margin-top: -111px;
 }
 
-// Styles for the footer logo
 .logo-for-footer{  
-    // Make the logo position relative to its normal position
+
     position: relative;
     
-    // Convert the logo into a block element for more control over positioning
+    //This is used to convert the image into a block element 
     display: block;  
 
-    // Move the logo to the right
     right: 61px;
 
-    // Set the font weight to regular
     font-weight: weight(regular);
 
-    // Set the color to white
     color: #FFFFFF;
 }
 
-// Styles for footer rows
 .footer-row {
-    // Remove padding
     padding: 0px;
-    
-    // Remove margin
     margin: 0px;
 }
 
-// Styles for footer text container
 .footer-text-containter {
-    // Extend styles from .menu-text-containter
     @extend .menu-text-containter;
-    
-    // Set text color to white
     color: white;
 }
 
-// Styles for footer text suggest
 .footer-text-suggest {
-    // Make the text position relative to its normal position
     position: relative;
-    
-    // Move the text to the right
     right: 69px;
 }
 
-// Styles for footer text partner
 .footer-text-partner {
-    // Make the text position relative to its normal position
     position: relative;
-    
-    // Move the text to the right
     right: 76px;
 }
 
-// Styles for footer text legal
 .footer-text-legal {
-    // Make the text position relative to its normal position
     position: relative;
-    
-    // Move the text to the right
     right: 148px;
-    
-    // Move the text down a bit
     top: 6px;
 }
 
-// Styles for footer text contact
 .footer-text-contact {
-    // Make the text position relative to its normal position
     position: relative;
-    
-    // Move the text to the right
     right: 141px;
-    
-    // Move the text down a bit
     top: 15px;
 }
 
-// Styles for the utensils icon
 .fa-solid.fa-utensils {
-    // Make the icon position relative to its normal position
     position: relative;
-    
-    // Move the icon to the right
     right: 160px;
-    
-    // Move the icon down a bit
     top: 17px;
 }
 
-// Styles for the handshake icon
 .fa-handshake-angle {    
-    // Extend the styles from .fa-solid and .fa-utensils
     @extend .fa-solid, .fa-utensils;
 }
 
-// Media query for PC screens
 @include PC {
-    // Styles for the footer container menu on PC screens
     .footer-container-menu {
-        // Extend the styles from .footer-content-container
         @extend .footer-content-container;
     
-        // Adjust the top margin
         margin-top: 1px;
     
-        // Reset the bottom and top padding
         padding-bottom: 0px;
         padding-top: 0px;
+    
     }
 
-    // Styles for the footer container menu enchanted plate on PC screens
     .footer-container-menu-enchanted-plate {
-        // Extend the styles from .footer-container-menu
         @extend .footer-container-menu;
-        
-        // Adjust the top margin
         margin-top: -366px;
     }
 }
 
-// Media query for medium screens (between 768px and 990px)
 @media (min-width: 768px) and (max-width: 990px) { 
-    // Styles for the footer container menu enchanted plate on medium screens
     .footer-container-menu-enchanted-plate {
-        // Adjust the top margin
         margin-top: -381px;
     }
 }
