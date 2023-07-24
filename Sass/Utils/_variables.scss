@@ -29,9 +29,6 @@ $font-weights: (
     @return map-get($font-weights, $weight-name);
 }
 
-@function hover_helper() {
-}
-
 // To use the above function: weight(regular): it would return the regular weight
 
 // Creating a variable for media queries:
