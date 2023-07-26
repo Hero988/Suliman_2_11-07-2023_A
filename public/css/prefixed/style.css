@@ -41,7 +41,21 @@
 }
 
 .menu-text-picked {
-  margin-top: -20px;
+  position: relative;
+  top: -25px;
+}
+
+/* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
+Fix W3*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Style for each row */
@@ -57,6 +71,7 @@
 
 .menu-text {
   font-size: 18px;
+  margin-top: 5px;
 }
 
 .how-it-works-container {
@@ -476,13 +491,6 @@ a {
   right: -23px;
 }
 
-.heart-custom-title {
-  position: relative;
-  right: -344px;
-  font-size: 30px;
-  top: -3px;
-}
-
 .menu-container-main {
   display: flex;
   flex-direction: column;
@@ -855,10 +863,6 @@ a {
   .menu-title {
     right: -266px;
   }
-  .heart-custom-title {
-    right: -626px;
-    top: -5px;
-  }
   .arrow-left-custom {
     right: 661px;
   }
@@ -1073,6 +1077,63 @@ a {
   opacity: 1;
 }
 
+.heart-custom-title {
+  position: relative;
+  right: -344px;
+  font-size: 30px;
+  top: -3px;
+}
+.heart-custom-title:hover {
+  opacity: 0;
+  color: #FFFFFF;
+}
+.heart-custom-title:active {
+  opacity: 0;
+  color: #FFFFFF;
+}
+
+.heart-custom-title2 {
+  position: relative;
+  right: -310px;
+  font-size: 30px;
+  top: -3px;
+  /* Apply a linear gradient as the background */
+  background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
+  background: linear-gradient(to right, #FF79DA, #9356DC);
+  /* Apply the background to the text */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  /* Make the text color transparent */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-custom-title2:hover {
+  opacity: 1;
+  /* adds a pointer*/
+  cursor: pointer;
+}
+.heart-custom-title2:active {
+  /* adds a pointer*/
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .heart-custom-title {
+    position: relative;
+    right: -614px;
+    font-size: 30px;
+    top: -3px;
+  }
+  .heart-custom-title2 {
+    position: relative;
+    right: -580px;
+    font-size: 30px;
+    top: -3px;
+  }
+}
 #loading-overlay {
   position: fixed;
   top: 0;

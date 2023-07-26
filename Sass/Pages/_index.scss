@@ -72,7 +72,21 @@
     // This is for the "picked for you" text 
     .menu-text-picked {
         // Moves the text up
-        margin-top: -20px;
+        position: relative;
+        top: -25px;
+    }
+
+    /* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
+    Fix W3*/
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
     }
 
     /* Style for each row */
@@ -97,6 +111,8 @@
     .menu-text {
         // Sets the size of the font to 18px
         font-size: 18px;
+
+        margin-top: 5px;
     }
 
 

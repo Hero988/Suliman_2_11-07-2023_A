@@ -4,6 +4,9 @@
     <!-- Page Title -->
     <title>ohmyfood</title> 
 
+    <!-- character encoding declaration. It tells the browser to use the UTF-8 character. -->
+    <meta charset="UTF-8">
+
     <!-- Font Awsome Import -->
     <script src="https://kit.fontawesome.com/c3ee9dbdfd.js" crossorigin="anonymous"></script> 
 
@@ -28,10 +31,12 @@
     <div id="loading-spinner"></div>
 
     <!-- Webpage Content -->
-    <div id="main-content" class="hidden-initially">
+    <div id="main-content" class="hidden-initially"> 
         <!-- Navigation Section of the website -->
         <section class="Navigation">  
-
+            <!-- To fix this warning from w3c validator Section lacks heading. 
+                Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.-->
+            <h2 class="visually-hidden">Navigation Section</h2>
             <!-- Div for the logo -->
             <header class="logo">
 
@@ -82,9 +87,7 @@
                 <!-- Menu button -->
                 <div class="menu-row">
 
-                    <a href="#restaurants-section">
-                        <button class="button-restaurants">Explore our restaurants</button>
-                    </a>
+                    <a href="#restaurants-section" class="button-restaurants">Explore our restaurants</a>
                 </div>
                 </div>
             </div>
@@ -92,6 +95,9 @@
 
         <!-- The main container for the "How it works" section -->
         <section class="how-it-works-container">
+            <!-- To fix this warning from w3c validator Section lacks heading. 
+            Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.-->
+            <h2 class="visually-hidden">how-it-works-container</h2>
 
             <!-- The title of the section -->
             <p class="section-title">How it works</p>
@@ -153,6 +159,10 @@
 
         <!-- Restaurants Section-->
         <section id="restaurants-section">
+        <!-- To fix this warning from w3c validator Section lacks heading. 
+        Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.-->
+        <h2 class="visually-hidden">restaurants-section</h2>
+        
         <!-- The title of the section -->
         <p class="section-title-restaurant">Restaurants</p> 
             <!-- The container for the cards -->
@@ -245,57 +255,57 @@
             </div>           
         </section>
 
-         <!-- Footer Section-->
+        <!-- Footer Section-->
         <footer>
             <div class="footer-container">
 
                 <!-- Menu content container -->
-            <div class="footer-content-container">
+                <div class="footer-content-container">
 
-                <!-- Menu header -->
-                <div class="footer-row">
-                    <div class="logo-for-footer">
-                        <!-- The logo image -->
-                        <h3 class="logo-for-footer">ohmyfood</h3>
+                    <!-- Menu header -->
+                    <div class="footer-row">
+                        <div class="logo-for-footer">
+                            <!-- The logo image -->
+                            <h3 class="logo-for-footer">ohmyfood</h3>
+                        </div>
                     </div>
-                </div>
-                <!-- Menu text -->
-                <!-- A container for the text -->
-                <div class="footer-row">
+                    <!-- Menu text -->
+                    <!-- A container for the text -->
+                    <div class="footer-row">
 
-                    <!-- A nested container for the text which we want to center align -->
-                    <div class="footer-text-containter">
-                        <i class="fa-solid fa-utensils"></i >
-                        <p class="footer-text-suggest ">Suggest a restaurant</p>
+                        <!-- A nested container for the text which we want to center align -->
+                        <div class="footer-text-containter">
+                            <i class="fa-solid fa-utensils"></i >
+                            <p class="footer-text-suggest ">Suggest a restaurant</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="footer-row">
+                    <div class="footer-row">
 
-                    <!-- A nested container for the text which we want to center align -->
-                    <div class="footer-text-containter">
-                        <i class="fa-solid fa-handshake-angle"></i>
-                        <p class="footer-text-partner">Become a Partner</p>
+                        <!-- A nested container for the text which we want to center align -->
+                        <div class="footer-text-containter">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <p class="footer-text-partner">Become a Partner</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="footer-row">
+                    <div class="footer-row">
 
-                    <!-- A nested container for the text which we want to center align -->
-                    <div class="footer-text-containter">
-                        <p class="footer-text-legal">Legal</p>
+                        <!-- A nested container for the text which we want to center align -->
+                        <div class="footer-text-containter">
+                            <p class="footer-text-legal">Legal</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="footer-row">
+                    <div class="footer-row">
 
-                    <!-- A nested container for the text which we want to center align -->
-                    <div class="footer-text-containter">
-                        <p class="footer-text-contact">Contact</p>
+                        <!-- A nested container for the text which we want to center align -->
+                        <div class="footer-text-containter">
+                            <p class="footer-text-contact">Contact</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </footer>
     </div>
 

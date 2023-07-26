@@ -51,6 +51,77 @@
         opacity: 1;
     }
 
-  }
+}
+
+.heart-custom-title {
+    position: relative;
+    right: -344px;
+    font-size: 30px;
+    top: -3px;
+    &:hover {
+        opacity: 0;
+        color: #FFFFFF;
+    }
+
+    &:active {
+        opacity: 0;
+        color: #FFFFFF;
+    }
+
+}
+
+.heart-custom-title2 {
+    position: relative;
+    right: -310px;
+    font-size: 30px;
+    top: -3px;
+
+        /* Apply a linear gradient as the background */
+        background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
+        background: linear-gradient(to right, #FF79DA, #9356DC);
+        
+        /* Apply the background to the text */
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        
+        /* Make the text color transparent */
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    
+        //initially sets the opacity to 0
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            /* adds a pointer*/
+            cursor: pointer;
+        }
+    
+        &:active {
+            /* adds a pointer*/
+            cursor: pointer;
+            opacity: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) { 
+    .heart-custom-title {
+        position: relative;
+        right: -614px;
+        font-size: 30px;
+        top: -3px;  
+    }
+
+    .heart-custom-title2 {
+        position: relative;
+        right: -580px;
+        font-size: 30px;
+        top: -3px;
+    
+    }
+
+}
+
   
 
