@@ -165,7 +165,7 @@
 
     // Unpause the animation for each card at the right time.
     // @for $i from 1 through 9 {...}: This is a loop that generates SCSS for the first 9 .card elements nested within a .grid element.
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         // .grid .card:nth-of-type(#{$i}) {...}: This targets the i-th .card within each .grid. #{$i} is a variable that holds the current number in the loop, 
         // and nth-of-type is a CSS selector that matches elements of a certain type, based on their order among their siblings.
         .grid .card:nth-of-type(#{$i}) {
@@ -455,7 +455,7 @@
             // This adds some space between the flex items.
             gap: 20px;
 
-            margin-top: -152px;
+            margin-top: 52px;
         }
 
         .grid-3 {
@@ -466,7 +466,7 @@
             // This adds some space between the flex items.
             gap: 20px;
 
-            margin-top: 49px;           
+            margin-top: 60px;           
         }
 
     }
