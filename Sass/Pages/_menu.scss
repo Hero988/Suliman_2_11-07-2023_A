@@ -269,6 +269,20 @@
         white-space: nowrap;
     }
 
+        /* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
+    Fix W3*/
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
+
     .card-enchanted-plate {
         @extend .card;
         height: 71px;

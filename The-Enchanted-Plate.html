@@ -4,6 +4,9 @@
     <!-- Page Title -->
     <title>The Enchanted Plate</title> 
 
+    <!-- character encoding declaration. It tells the browser to use the UTF-8 character. -->
+    <meta charset="UTF-8">
+
     <!-- Font Awsome Import -->
     <script src="https://kit.fontawesome.com/c3ee9dbdfd.js" crossorigin="anonymous"></script> 
 
@@ -26,8 +29,12 @@
         <!-- Div for the logo -->
         <header class="logo">
 
-            <!-- The logo image -->
-            <img src="images/logo/ohmyfood.png" alt="Logo"> 
+        <!-- To fix the warning from w3c validator Section lacks heading. 
+        I used h2 element to add identifying headings to all sections-->
+        <h2 class="visually-hidden">Navigation Section</h2>
+
+        <!-- The logo image -->
+        <img src="images/logo/ohmyfood.png" alt="Logo"> 
 
         <!-- The back button -->
         <a href="index.html">
@@ -196,10 +203,6 @@
             </div>
         </div>
 
-        </div>
-
-    </div>
-
     <!-- Footer Section-->
     <footer>
         <div class="footer-container-menu-enchanted-plate">
@@ -243,20 +246,17 @@
             </div>
 
             <div class="footer-row">
-
-                <div class="footer-row">
-
-                    <!-- A nested div to align the text in the center -->
-                    <div class="footer-text-containter">
-                        <!-- This is a link that, when clicked, will open the user's default email software. -->
-                        <!-- The "mailto" in the href tells the browser to open the email software. -->
-                        <!-- The "info@ohmyfood.com" is the email address that will be automatically filled into the "To" field of the new email. -->
-                        <!-- The text between the opening and closing 'a' tags ("Contact") is what the user will see and click on. -->
-                        <a href="mailto:info@ohmyfood.com" class="footer-text-contact">Contact</a>
-                    </div>
+                <!-- A nested div to align the text in the center -->
+                <div class="footer-text-containter">
+                    <!-- This is a link that, when clicked, will open the user's default email software. -->
+                    <!-- The "mailto" in the href tells the browser to open the email software. -->
+                    <!-- The "info@ohmyfood.com" is the email address that will be automatically filled into the "To" field of the new email. -->
+                    <!-- The text between the opening and closing 'a' tags ("Contact") is what the user will see and click on. -->
+                    <a href="mailto:info@ohmyfood.com" class="footer-text-contact">Contact</a>
                 </div>
             </div>
         </div>
+    </div>
 
     </footer>
 
