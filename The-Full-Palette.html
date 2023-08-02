@@ -232,9 +232,16 @@
 
             <div class="footer-row">
 
-                <!-- A nested container for the text which we want to center align -->
-                <div class="footer-text-containter">
-                    <p class="footer-text-contact">Contact</p>
+                <div class="footer-row">
+
+                    <!-- A nested div to align the text in the center -->
+                    <div class="footer-text-containter">
+                        <!-- This is a link that, when clicked, will open the user's default email software. -->
+                        <!-- The "mailto" in the href tells the browser to open the email software. -->
+                        <!-- The "info@ohmyfood.com" is the email address that will be automatically filled into the "To" field of the new email. -->
+                        <!-- The text between the opening and closing 'a' tags ("Contact") is what the user will see and click on. -->
+                        <a href="mailto:info@ohmyfood.com" class="footer-text-contact">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
