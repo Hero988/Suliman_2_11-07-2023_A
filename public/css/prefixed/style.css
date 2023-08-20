@@ -92,6 +92,7 @@ Fix W3*/
 }
 
 .cards-container, .cards-container-restaurant {
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +101,8 @@ Fix W3*/
 }
 
 .card, .card-enchanted-plate, .card3 {
+  position: relative;
+  max-width: 350px;
   width: 350px;
   height: 50px;
   display: flex;
@@ -113,7 +116,7 @@ Fix W3*/
 }
 
 .card3 {
-  background-color: #F5EDFF;
+  background-color: #F5EDFF !important;
 }
 
 .icon-container {
@@ -210,8 +213,8 @@ Fix W3*/
 .card-new {
   position: absolute;
   z-index: 9999;
-  top: 1038px;
-  right: 31px;
+  top: -34px;
+  right: 12px;
   width: 110px;
   height: 35px;
   display: flex;
@@ -233,8 +236,8 @@ Fix W3*/
 .card-new-2 {
   position: absolute;
   z-index: 9999;
-  top: 1348px;
-  right: 31px;
+  top: -34px;
+  right: 12px;
   width: 110px;
   height: 35px;
   display: flex;
@@ -298,14 +301,14 @@ a {
     position: relative;
     font-size: 25px;
     top: -10px;
-    left: 77px;
+    left: 299px;
     padding-bottom: 10px;
   }
   .location-dot-custom {
     position: relative;
     font-size: 25px;
     top: -15px;
-    right: 134px;
+    right: -80px;
   }
   #restaurants-section {
     display: flex;
@@ -318,8 +321,7 @@ a {
     padding-top: 100px;
   }
   .section-title-restaurant {
-    position: relative;
-    right: 786px;
+    right: -8px;
     font-size: 24px;
     font-weight: 700;
     bottom: 20px;
@@ -362,8 +364,8 @@ a {
   .card-new {
     position: absolute;
     z-index: 9999;
-    top: 1100px;
-    right: 1670px;
+    top: -34px;
+    right: 12px;
     width: 110px;
     height: 35px;
     display: flex;
@@ -383,8 +385,8 @@ a {
   .card-new-2 {
     position: absolute;
     z-index: 9999;
-    top: 1100px;
-    right: 1232px;
+    top: -34px;
+    right: 12px;
     width: 110px;
     height: 35px;
     display: flex;
@@ -428,8 +430,8 @@ a {
   .card-new {
     position: absolute;
     z-index: 9999;
-    top: 1119px;
-    right: 236px;
+    top: -34px;
+    right: 12px;
     width: 110px;
     height: 35px;
     display: flex;
@@ -443,11 +445,14 @@ a {
     margin: 0;
     padding: 0;
   }
+  .card-new-text {
+    color: #008766;
+  }
   .card-new-2 {
     position: absolute;
     z-index: 9999;
-    top: 1441px;
-    right: 235px;
+    top: -34px;
+    right: 12px;
     width: 110px;
     height: 35px;
     display: flex;
@@ -703,6 +708,19 @@ a {
   border-bottom: 3px solid #99E2D0;
   width: 10%;
   white-space: nowrap;
+}
+
+/* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
+Fix W3*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .card-enchanted-plate {
