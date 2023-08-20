@@ -957,6 +957,7 @@ Fix W3*/
 
 @media (min-width: 991px) {
   .footer-container-menu, .footer-container-menu-enchanted-plate {
+    width: 2181px;
     margin-top: 1px;
     padding-bottom: 0px;
     padding-top: 0px;
@@ -967,6 +968,7 @@ Fix W3*/
 }
 @media (min-width: 768px) and (max-width: 990px) {
   .footer-container-menu-enchanted-plate {
+    width: 2181px;
     margin-top: -381px;
   }
 }

@@ -86,7 +86,9 @@
 @include PC {
     .footer-container-menu {
         @extend .footer-content-container;
-    
+        
+        width: 2181px ;
+        
         margin-top: 1px;
     
         padding-bottom: 0px;
@@ -102,6 +104,7 @@
 
 @media (min-width: 768px) and (max-width: 990px) { 
     .footer-container-menu-enchanted-plate {
+        width: 2181px ;
         margin-top: -381px;
     }
 }
