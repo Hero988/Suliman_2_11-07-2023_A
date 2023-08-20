@@ -31,6 +31,14 @@
     
         }
 
+        .arrow-left-custom {
+            position: relative;
+            right: 525px;
+            font-size: 20px;
+            color: #353535;
+        }
+    
+
     // mixin for PC screens     
     @include PC {
         .logo img{
@@ -47,6 +55,13 @@
             right: -145px;
     
         }
+
+        .arrow-left-custom {
+            position: relative;
+            right: 349px;
+            font-size: 20px;
+            color: #353535;
+        }
     
         /* Style for the logo container */
         .logo {
@@ -61,6 +76,15 @@
             height: fit-content;
 
     
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 990px) { 
+        .arrow-left-custom {
+            position: relative;
+            right: 710px;
+            font-size: 20px;
+            color: #353535;
         }
     }
 

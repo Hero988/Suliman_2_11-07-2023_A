@@ -467,22 +467,15 @@ a {
     padding: 0;
   }
 }
-.arrow-left-custom {
-  position: relative;
-  right: 363px;
-  font-size: 20px;
-  color: #353535;
-}
-
 .image-styling {
   height: 350px;
-  width: 450px;
+  width: 584px;
 }
 
 .menu-container-ohmyfood {
   position: relative;
   top: -59px;
-  width: 420px;
+  width: 577px;
   height: 1200px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
@@ -842,7 +835,7 @@ Fix W3*/
   .menu-container-ohmyfood {
     position: relative;
     top: -32px;
-    width: 838px;
+    width: 990px;
     height: 1255px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
@@ -853,7 +846,7 @@ Fix W3*/
     position: relative;
     top: -383px;
     height: 1266px;
-    width: 839px;
+    width: 954px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -865,7 +858,7 @@ Fix W3*/
     top: -385px;
     height: 1217px;
     right: 10px;
-    width: 835px;
+    width: 954px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -883,9 +876,6 @@ Fix W3*/
   .menu-title {
     right: -266px;
   }
-  .arrow-left-custom {
-    right: 661px;
-  }
 }
 .footer-content-container, .footer-container-menu, .footer-container-menu-enchanted-plate {
   display: flex;
@@ -901,6 +891,7 @@ Fix W3*/
   margin-top: -57px;
   padding-bottom: 0px;
   padding-top: 0px;
+  width: 514px;
 }
 
 .footer-container-menu-enchanted-plate {
@@ -954,19 +945,39 @@ Fix W3*/
 
 @media (min-width: 991px) {
   .footer-container-menu, .footer-container-menu-enchanted-plate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #353535;
+    padding-top: 20px;
+    padding-bottom: 50px;
     width: 2181px;
     margin-top: 1px;
     padding-bottom: 0px;
     padding-top: 0px;
   }
   .footer-container-menu-enchanted-plate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #353535;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 2181px;
+    margin-top: 1px;
+    padding-bottom: 0px;
     margin-top: -366px;
   }
 }
 @media (min-width: 768px) and (max-width: 990px) {
   .footer-container-menu-enchanted-plate {
-    width: 2181px;
+    width: 934px;
     margin-top: -381px;
+  }
+  .footer-container-menu, .footer-container-menu-enchanted-plate {
+    width: 990px;
   }
 }
 .logo img {
@@ -987,6 +998,13 @@ Fix W3*/
   height: 100%;
 }
 
+.arrow-left-custom {
+  position: relative;
+  right: 525px;
+  font-size: 20px;
+  color: #353535;
+}
+
 @media (min-width: 991px) {
   .logo img {
     position: relative;
@@ -994,6 +1012,12 @@ Fix W3*/
     width: fit-content;
     height: fit-content;
     right: -145px;
+  }
+  .arrow-left-custom {
+    position: relative;
+    right: 349px;
+    font-size: 20px;
+    color: #353535;
   }
   /* Style for the logo container */
   .logo {
@@ -1004,6 +1028,14 @@ Fix W3*/
     flex-direction: row;
     width: fit-content;
     height: fit-content;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .arrow-left-custom {
+    position: relative;
+    right: 710px;
+    font-size: 20px;
+    color: #353535;
   }
 }
 /* Style for the button to explore restaurants */
