@@ -1090,14 +1090,15 @@ Fix W3*/
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   opacity: 0;
+  transition: opacity 2s;
 }
 .heart-custom-2:hover {
   opacity: 1;
-  /* adds a pointer*/
+  /* adds a pointer */
   cursor: pointer;
 }
 .heart-custom-2:active {
-  /* adds a pointer*/
+  /* adds a pointer */
   cursor: pointer;
   opacity: 1;
 }
@@ -1133,14 +1134,15 @@ Fix W3*/
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   opacity: 0;
+  transition: opacity 2s;
 }
 .heart-custom-title2:hover {
   opacity: 1;
-  /* adds a pointer*/
+  /* adds a pointer */
   cursor: pointer;
 }
 .heart-custom-title2:active {
-  /* adds a pointer*/
+  /* adds a pointer */
   cursor: pointer;
   opacity: 1;
 }
