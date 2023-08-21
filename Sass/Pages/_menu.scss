@@ -1,7 +1,7 @@
 
     .image-styling {
         height: 350px;
-        width: 584px;
+        width: 598px;
     }
 
     .menu-container-ohmyfood {
@@ -10,7 +10,7 @@
         top: -59px;
 
         // This sets the width and height of the container to 100px each.
-        width: 577px;
+        width: 592px;
         height: 1200px;
 
         padding-bottom: 50px;
@@ -102,7 +102,7 @@
             width: 0;
             /* Start with the element's width at 0 */
             /* Adjusted to start from the side of the menu item */
-            transform: translateX(10px); 
+            transform: translateX(30px); 
             /* Transition only the width and transform properties (removing opacity) */
             transition: width 0.5s, transform 0.5s; 
         }
@@ -271,7 +271,7 @@
         height: 1266px;
 
         // This sets the width and height of the container to 100px each.
-        width: 420px;
+        width: 614px;
 
         padding-bottom: 50px;
         
@@ -291,7 +291,7 @@
         height: 1217px;
 
         // This sets the width and height of the container to 100px each.
-        width: 420px;
+        width: 597px;
         height: 1200px;
 
         padding-bottom: 50px;

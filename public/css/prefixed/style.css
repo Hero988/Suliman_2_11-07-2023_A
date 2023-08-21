@@ -469,13 +469,13 @@ a {
 }
 .image-styling {
   height: 350px;
-  width: 584px;
+  width: 598px;
 }
 
 .menu-container-ohmyfood {
   position: relative;
   top: -59px;
-  width: 577px;
+  width: 592px;
   height: 1200px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
@@ -546,7 +546,7 @@ a {
   width: 0;
   /* Start with the element's width at 0 */
   /* Adjusted to start from the side of the menu item */
-  transform: translateX(10px);
+  transform: translateX(30px);
   /* Transition only the width and transform properties (removing opacity) */
   transition: width 0.5s, transform 0.5s;
 }
@@ -721,7 +721,7 @@ Fix W3*/
   position: relative;
   top: -114px;
   height: 1266px;
-  width: 420px;
+  width: 614px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -732,7 +732,7 @@ Fix W3*/
   position: relative;
   top: -114px;
   height: 1217px;
-  width: 420px;
+  width: 597px;
   height: 1200px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
@@ -891,7 +891,7 @@ Fix W3*/
   margin-top: -57px;
   padding-bottom: 0px;
   padding-top: 0px;
-  width: 514px;
+  width: 597px;
 }
 
 .footer-container-menu-enchanted-plate {
@@ -996,11 +996,12 @@ Fix W3*/
   align-items: center;
   flex-direction: row;
   height: 100%;
+  width: 690px;
 }
 
 .arrow-left-custom {
   position: relative;
-  right: 525px;
+  right: 624px;
   font-size: 20px;
   color: #353535;
 }
@@ -1033,9 +1034,12 @@ Fix W3*/
 @media (min-width: 768px) and (max-width: 990px) {
   .arrow-left-custom {
     position: relative;
-    right: 710px;
+    right: 878px;
     font-size: 20px;
     color: #353535;
+  }
+  .logo {
+    width: 1123px;
   }
 }
 /* Style for the button to explore restaurants */
