@@ -143,35 +143,34 @@
         // Add some space between the cards 
         gap: 20px;
     }
+    
 
     // Styling for each individual card 
-    .card {
+    .card_howitworks {
     position: relative;
-    max-width: 350px;
-        // Set the card dimensions 
-        width: 350px;
-        height: 50px;
-
-        // Center the content (Using a mixin)
-        @include flexCenter(column);
-
-        // Add background color (using the varible $background-color) and rounded corners 
-        background-color: #F6F6F6;
-        border-radius: 30px;
-
-        // Add padding around the content inside the card 
-        padding: 10px;
-
-        // Add a shadow border. Adjust the values as needed 
-        // The values are in the order of: horizontal offset, vertical offset, blur radius, spread radius, and color 
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left side) of the card */
+    justify-content: space-between; /* Distribute space evenly between items */
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    transition: width 0.3s ease;
+    margin-left: 22px;
+    top: 11px;
+    opacity: 0; /* Hide the card initially */
+    animation: slideUpFadeIn 2s ease-out;
+    animation-fill-mode: forwards; /* Ensure the card remains visible after the animation is complete */
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     }
 
     // The element that we extend it too will inherit all the styles from the selected element
     // We want to extend all the styles in .card onto .card3 so we just want to change the background-color 
     #{&}.card3 {
         // So here we are using all the styles from card
-        @extend .card;
+        @extend .card_howitworks;
         // We are just changing the background color:
         background-color:  #F5EDFF !important;
     }
