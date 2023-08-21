@@ -1,96 +1,95 @@
 
 // Header of all the webpages
     // Style for the logo image
-        .logo img{
-            //This is used to convert the image into a block element 
-            display: block;  
-            
-            //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
-            margin: auto;    
-    
-            //This is used to make sure that the image will scale to the width of its container.
-            width: 40%;
-    
-            //This adds space above the logo image
-            padding-top: 5%;
-    
-            //This adds space below the logo image
-            padding-bottom: 5%;
-        }
-    
-        /* Style for the logo container */
-        .logo {
-            //This will add a shadow effect below the container 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    
-            // Using the mixin flexCenter (row is using the argument)
-            @include flexCenter(row);
-    
-            // This is used to make the container occupy the full height of its parent 
-            height: 100%;
+    .logo img{
+        //This is used to convert the image into a block element 
+        display: block;  
+        
+        //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
+        margin: auto;    
 
-            width: 690px;
-    
-        }
+        //This is used to make sure that the image will scale to the width of its container.
+        width: 40%;
 
-        .arrow-left-custom {
-            position: relative;
-            right: 624px;
-            font-size: 20px;
-            color: #353535;
-        }
-    
+        //This adds space above the logo image
+        padding-top: 5%;
 
-    // mixin for PC screens     
-    @include PC {
-        .logo img{
-
-            position: relative;
-            
-            //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
-            margin: auto;   
-
-            width: fit-content;
-
-            height: fit-content;
-
-            right: -145px;
-    
-        }
-
-        .arrow-left-custom {
-            position: relative;
-            right: 349px;
-            font-size: 20px;
-            color: #353535;
-        }
-    
-        /* Style for the logo container */
-        .logo {
-
-            box-shadow: none;
-    
-            // Using the mixin flexCenter (row is using the argument)
-            @include flexCenter(row);
-
-            width: fit-content;
-
-            height: fit-content;
-
-    
-        }
+        //This adds space below the logo image
+        padding-bottom: 5%;
     }
 
-    @media (min-width: 768px) and (max-width: 990px) { 
-        .arrow-left-custom {
-            position: relative;
-            right: 878px;
-            font-size: 20px;
-            color: #353535;
-        }
+    /* Style for the logo container */
+    .logo {
+        //This will add a shadow effect below the container 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
-        .logo {
-            width: 1123px;
-        }
+        // Using the mixin flexCenter (row is using the argument)
+        @include flexCenter(row);
+
+        // This is used to make the container occupy the full height of its parent 
+        height: 100%;
+
+        width: 690px;
+
     }
 
+    .arrow-left-custom {
+        position: relative;
+        right: 624px;
+        font-size: 20px;
+        color: #353535;
+    }
+
+
+// mixin for PC screens     
+@include PC {
+    .logo img{
+
+        position: relative;
+        
+        //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
+        margin: auto;   
+
+        width: fit-content;
+
+        height: fit-content;
+
+        right: -145px;
+
+    }
+
+    .arrow-left-custom {
+        position: relative;
+        right: 349px;
+        font-size: 20px;
+        color: #353535;
+    }
+
+    /* Style for the logo container */
+    .logo {
+
+        box-shadow: none;
+
+        // Using the mixin flexCenter (row is using the argument)
+        @include flexCenter(row);
+
+        width: fit-content;
+
+        height: fit-content;
+
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) { 
+    .arrow-left-custom {
+        position: relative;
+        right: 878px;
+        font-size: 20px;
+        color: #353535;
+    }
+
+    .logo {
+        width: 1123px;
+    }
+}
