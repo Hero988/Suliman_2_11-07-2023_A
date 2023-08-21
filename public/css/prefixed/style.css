@@ -528,27 +528,31 @@ a {
   height: 50px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px;
   align-items: flex-start; /* Align items to the start (left side) of the card */
   justify-content: space-between; /* Distribute space evenly between items */
-  padding: 10px;
   border-radius: 20px;
   background-color: white;
   transition: width 0.3s ease;
   margin-left: 22px;
   top: 11px;
   opacity: 0; /* Hide the card initially */
+  overflow: hidden;
+  /* Add the animation */
   animation: slideUpFadeIn 2s ease-out;
-  animation-fill-mode: forwards; /* Ensure the card remains visible after the animation is complete */
-  /* Adjust the checkmark's starting position and remove opacity transition */
+  animation-fill-mode: forwards;
+  /* Hide the checkmark initially and set its width to 0 */
 }
 .card .checkmark, .card-enchanted-plate .checkmark, .card .checkmark-enchanted-plate, .card-enchanted-plate .checkmark-enchanted-plate, .card3 .checkmark, .card3 .checkmark-enchanted-plate, .card .custom-checkmark, .card-enchanted-plate .custom-checkmark, .card3 .custom-checkmark {
-  opacity: 0; /* Make it fully visible */
+  opacity: 0;
   width: 0;
   /* Start with the element's width at 0 */
-  /* Adjusted to start from the side of the menu item */
-  transform: translateX(30px);
-  /* Transition only the width and transform properties (removing opacity) */
-  transition: width 0.5s, transform 0.5s;
+  /* The checkmark is moved 100px to the right (offscreen) */
+  transform: translateX(100px);
+  /* Transition both the width, opacity and transform properties */
+  transition: width 0.5s, opacity 0.5s, transform 0.5s;
 }
 
 .card-content {
