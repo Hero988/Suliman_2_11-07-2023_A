@@ -94,14 +94,14 @@
         // This is used to make the container occupy the full height of its parent 
         height: 100%;
 
-        width: 690px;
-
+        width: 100vw;
+        align-items: center;
     }
 
     .arrow-left-custom {
         position: relative;
-        right: 624px;
         font-size: 20px;
+        right: 87vw;
         color: #353535;
     }
 
@@ -149,13 +149,13 @@
 @media (min-width: 768px) and (max-width: 990px) { 
     .arrow-left-custom {
         position: relative;
-        right: 878px;
+        right: 81vw;
         font-size: 20px;
         color: #353535;
     }
 
     .logo {
-        width: 1123px;
+        width: 100vw;
     }
 }
 

@@ -68,8 +68,25 @@
     
             //just changing where the button is
             position: relative;
-            top: 127px;
+            top: 149px;
             right: 515px;
         } 
+
+        .button-order-enchanted-plate {
+            right: 726px;
+            top: 343px;
+        }
+    }
+
+    @media (min-width: 991px) and (max-width: 1471px) { 
+        .button-order {
+            right: 1025px;
+            top: 198px;
+        }
+        
+        .button-order-enchanted-plate {
+            right: 726px;
+            top: 343px;
+        }
     }
 

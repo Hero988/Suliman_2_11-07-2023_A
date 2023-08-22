@@ -1,7 +1,7 @@
 
 .image-styling {
     height: 350px;
-    width: 598px;
+    width: 100vw;
 }
 
 .menu-container-ohmyfood {
@@ -10,7 +10,7 @@
     top: -59px;
 
     // This sets the width and height of the container to 100px each.
-    width: 592px;
+    width: 100vw;
     height: 1200px;
 
     padding-bottom: 50px;
@@ -291,7 +291,7 @@ Fix W3*/
     height: 1266px;
 
     // This sets the width and height of the container to 100px each.
-    width: 614px;
+    width: 100vw;
 
     padding-bottom: 50px;
     
@@ -311,7 +311,7 @@ Fix W3*/
     height: 1217px;
 
     // This sets the width and height of the container to 100px each.
-    width: 597px;
+    width: 100vw;
     height: 1200px;
 
     padding-bottom: 50px;
@@ -344,10 +344,31 @@ Fix W3*/
         background-color: #F6F6F6;
     }
 
+    .grid-title-dessert-enchanted-plate {
+        top: 240px;
+    }
+
+    .grid-title-main-dish-enchanted-plate {
+        top: 155px;
+    }
+
+    .card-1 {
+        top: 239px;
+    }
+
+    .card-6 {
+        top: 154px;
+    }
+
+    .card-8 {
+        top: 143px;
+        right: 1240px;
+    }
+
     .menu-container-ohmyfood-Le-Gourmand {
         position: relative;
 
-        top:-369px;
+        top:-244px;
         right: 18px;
 
         // This sets the width and height of the container to 100px each.
@@ -367,12 +388,12 @@ Fix W3*/
     .menu-container-ohmyfood-enchanted-plate {
         position: relative;
 
-        top:-369px;
+        top:-248px;
         right: 18px;
 
         // This sets the width and height of the container to 100px each.
         width: 2041px;
-        height: 660px;
+        height: 840px;
 
         padding-bottom: 50px;
         
@@ -445,6 +466,10 @@ Fix W3*/
         display: none;
     }
 
+    .hide2 {
+        opacity: 0;
+    }
+
     // The styles for the menu-container-main
     .menu-container-main {
         // Using display: flex; makes the container a flex container and its children flex items.
@@ -501,6 +526,10 @@ Fix W3*/
         background-color: #F6F6F6;
     }
 
+    .hide2 {
+        opacity: 0;   
+    }
+
     
     .menu-container-ohmyfood-enchanted-plate {
         position: relative;
@@ -509,7 +538,7 @@ Fix W3*/
         height: 1266px;
 
         // This sets the width and height of the container to 100px each.
-        width: 954px;
+        width: 1000px;
 
         padding-bottom: 50px;
         
@@ -532,7 +561,7 @@ Fix W3*/
         right: 10px;
 
         // This sets the width and height of the container to 100px each.
-        width: 954px;
+        width: 1010px;
 
         padding-bottom: 50px;
         
@@ -561,4 +590,30 @@ Fix W3*/
     }
 }
 
+@media (min-width: 991px) and (max-width: 1471px) {
+    .card-3 {
+        right: 508px;
+        top: 116px;
+    }
+
+    .card-2 {
+        right: 482px;
+        top: 123px
+    }
+
+    .card-5 {
+        top:364px;
+        right: 822px;;
+    }
+
+    .card-7 {
+        top: 268px;
+        right: 824px;
+    }
+
+    .card-9 {
+        top: 148px;
+        right: 411px;
+    }
+}
 

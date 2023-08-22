@@ -474,13 +474,13 @@ a {
 }
 .image-styling {
   height: 350px;
-  width: 598px;
+  width: 100vw;
 }
 
 .menu-container-ohmyfood {
   position: relative;
   top: -59px;
-  width: 592px;
+  width: 100vw;
   height: 1200px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
@@ -731,7 +731,7 @@ Fix W3*/
   position: relative;
   top: -114px;
   height: 1266px;
-  width: 614px;
+  width: 100vw;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -742,7 +742,7 @@ Fix W3*/
   position: relative;
   top: -114px;
   height: 1217px;
-  width: 597px;
+  width: 100vw;
   height: 1200px;
   padding-bottom: 50px;
   border-top-left-radius: 50px;
@@ -761,9 +761,25 @@ Fix W3*/
     border-top-right-radius: 50px;
     background-color: #F6F6F6;
   }
+  .grid-title-dessert-enchanted-plate {
+    top: 240px;
+  }
+  .grid-title-main-dish-enchanted-plate {
+    top: 155px;
+  }
+  .card-1 {
+    top: 239px;
+  }
+  .card-6 {
+    top: 154px;
+  }
+  .card-8 {
+    top: 143px;
+    right: 1240px;
+  }
   .menu-container-ohmyfood-Le-Gourmand {
     position: relative;
-    top: -369px;
+    top: -244px;
     right: 18px;
     width: 2044px;
     height: 758px;
@@ -774,10 +790,10 @@ Fix W3*/
   }
   .menu-container-ohmyfood-enchanted-plate {
     position: relative;
-    top: -369px;
+    top: -248px;
     right: 18px;
     width: 2041px;
-    height: 660px;
+    height: 840px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -822,6 +838,9 @@ Fix W3*/
   .hide {
     display: none;
   }
+  .hide2 {
+    opacity: 0;
+  }
   .menu-container-main {
     display: flex;
     flex-direction: column;
@@ -852,11 +871,14 @@ Fix W3*/
     border-top-right-radius: 50px;
     background-color: #F6F6F6;
   }
+  .hide2 {
+    opacity: 0;
+  }
   .menu-container-ohmyfood-enchanted-plate {
     position: relative;
     top: -383px;
     height: 1266px;
-    width: 954px;
+    width: 1000px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -868,7 +890,7 @@ Fix W3*/
     top: -385px;
     height: 1217px;
     right: 10px;
-    width: 954px;
+    width: 1010px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -887,6 +909,28 @@ Fix W3*/
     right: -266px;
   }
 }
+@media (min-width: 991px) and (max-width: 1471px) {
+  .card-3 {
+    right: 508px;
+    top: 116px;
+  }
+  .card-2 {
+    right: 482px;
+    top: 123px;
+  }
+  .card-5 {
+    top: 364px;
+    right: 822px;
+  }
+  .card-7 {
+    top: 268px;
+    right: 824px;
+  }
+  .card-9 {
+    top: 148px;
+    right: 411px;
+  }
+}
 .footer-content-container, .footer-container-menu, .footer-container-menu-enchanted-plate {
   display: flex;
   justify-content: center;
@@ -901,7 +945,7 @@ Fix W3*/
   margin-top: -57px;
   padding-bottom: 0px;
   padding-top: 0px;
-  width: 597px;
+  width: 100vw;
 }
 
 .footer-container-menu-enchanted-plate {
@@ -978,7 +1022,7 @@ Fix W3*/
     width: 2181px;
     margin-top: 1px;
     padding-bottom: 0px;
-    margin-top: -366px;
+    margin-top: -244px;
   }
 }
 @media (min-width: 768px) and (max-width: 990px) {
@@ -988,6 +1032,11 @@ Fix W3*/
   }
   .footer-container-menu, .footer-container-menu-enchanted-plate {
     width: 990px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1471px) {
+  .footer-container-menu, .footer-container-menu-enchanted-plate {
+    width: 100vw;
   }
 }
 .logo1 img {
@@ -1043,13 +1092,14 @@ Fix W3*/
   align-items: center;
   flex-direction: row;
   height: 100%;
-  width: 690px;
+  width: 100vw;
+  align-items: center;
 }
 
 .arrow-left-custom {
   position: relative;
-  right: 624px;
   font-size: 20px;
+  right: 87vw;
   color: #353535;
 }
 
@@ -1081,12 +1131,12 @@ Fix W3*/
 @media (min-width: 768px) and (max-width: 990px) {
   .arrow-left-custom {
     position: relative;
-    right: 878px;
+    right: 81vw;
     font-size: 20px;
     color: #353535;
   }
   .logo {
-    width: 1123px;
+    width: 100vw;
   }
 }
 /* Style for the button to explore restaurants */
@@ -1134,8 +1184,22 @@ Fix W3*/
   .button-order {
     width: 200px;
     position: relative;
-    top: 127px;
+    top: 149px;
     right: 515px;
+  }
+  .button-order-enchanted-plate {
+    right: 726px;
+    top: 343px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1471px) {
+  .button-order {
+    right: 1025px;
+    top: 198px;
+  }
+  .button-order-enchanted-plate {
+    right: 726px;
+    top: 343px;
   }
 }
 .heart-custom {
@@ -1311,6 +1375,14 @@ Fix W3*/
 * {
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
