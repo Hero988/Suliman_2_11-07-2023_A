@@ -534,7 +534,6 @@ a {
 .card {
   position: relative;
   max-width: 350px; /* Set a max width, but allow it to be smaller if needed */
-  min-width: 200px; /* Set a minimum width to ensure it doesn't get too small */
   height: 50px;
   display: flex;
   flex-direction: column;
@@ -816,7 +815,8 @@ Fix W3*/
   .menu-container-main {
     display: flex;
     flex-direction: column;
-    gap: 147px;
+    gap: 40px;
+    width: 100vw;
     margin-top: 27px;
   }
   .grid-2 {
@@ -837,7 +837,6 @@ Fix W3*/
   .card {
     position: relative;
     width: 350px;
-    min-width: 200px;
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -1237,7 +1236,6 @@ Fix W3*/
   .button-order {
     width: 200px;
     position: relative;
-    top: -70px;
     right: -293px;
   }
   .button-order-enchanted {

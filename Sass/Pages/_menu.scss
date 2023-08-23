@@ -86,7 +86,6 @@
     .card {
         position: relative;
         max-width: 350px; /* Set a max width, but allow it to be smaller if needed */
-        min-width: 200px; /* Set a minimum width to ensure it doesn't get too small */
         height: 50px;
         // This makes the card a flex container and its children flex items.
         display: flex;
@@ -420,7 +419,9 @@ Fix W3*/
         // This makes the main axis vertical and lays out the flex items in a column.
         flex-direction: column;
         // This adds some space between the flex items.
-        gap: 147px;
+        gap: 40px;
+
+        width: 100vw;
 
         margin-top: 27px;
     }
@@ -451,13 +452,10 @@ Fix W3*/
         height: 524px;
     }
 
-    
-
     // The styles for the card
     .card {
         position: relative;
         width: 350px;
-        min-width: 200px;
         height: 50px;
         // This makes the card a flex container and its children flex items.
         display: flex;
