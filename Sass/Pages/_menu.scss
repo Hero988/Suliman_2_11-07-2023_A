@@ -41,6 +41,8 @@
     // This adds some space between the flex items.
     gap: 20px;
 
+    margin-left:-6px;
+
     margin-top: 27px;
 }
 
@@ -129,6 +131,10 @@
             /* Transition both the width, opacity and transform properties */
             transition: width 0.5s, opacity 0.5s, transform 0.5s; 
         }
+    }
+
+    .enchanted-plate {
+        height: 71px;
     }
 
     .card-text-menu {
@@ -262,7 +268,7 @@
     white-space: nowrap;
 }
 
-    /* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
+/* The .visually-hidden class is a technique used in CSS to hide elements in a way that they remain accessible to assistive technologies like screen readers.
 Fix W3*/
 .visually-hidden {
     position: absolute;
@@ -275,11 +281,61 @@ Fix W3*/
     border: 0;
 }
 
+    // The styles for the card
+    .card-enchanted-plate {
+        position: relative;
+        width: 350px;
+        min-width: 200px;
+        height: 71px;
+        // This makes the card a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This aligns the flex items to the right.
+        align-items: flex-end;
+        // This justifies the content to the space-between.
+        justify-content: space-between;
+        // This sets the padding inside the card.
+        padding: 10px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 
-.card-enchanted-plate {
-    @extend .card;
-    height: 71px;
-}
+        align-items: flex-start; /* Align items to the start (left side) of the card */
+        justify-content: space-between; /* Distribute space evenly between items */
+
+        border-radius: 20px;
+        background-color: white;
+
+        transition: width 0.3s ease;
+
+        margin-left: 22px;
+        top: 11px;
+
+        opacity: 0; /* Hide the card initially */
+
+        overflow: hidden;
+
+        .card-text-menu {
+            margin: 0;
+            margin-top: 11px;
+            transition: width 0.3s ease; 
+            white-space: nowrap;  // Prevents the text from wrapping to the next line
+            overflow: hidden;  // Clips the text if it overflows
+            text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
+            width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+            display: block;  // Treat this element as a block level element
+        }
+
+        /* Hide the checkmark initially and set its width to 0 */
+        .checkmark, .custom-checkmark {
+            opacity: 0;
+            width: 0;
+            /* Start with the element's width at 0 */
+            /* The checkmark is moved 100px to the right (offscreen) */
+            transform: translateX(100px); 
+            /* Transition both the width, opacity and transform properties */
+            transition: width 0.5s, opacity 0.5s, transform 0.5s; 
+        }
+    }
 
 @include PC {
     .menu-container-ohmyfood {
@@ -347,53 +403,6 @@ Fix W3*/
         flex-direction: row;
         // This adds some space between the flex items.
         gap: 20px;
-    }
-
-    .card-4 {
-        position: relative;
-        // This sets the width and height of the card to 100px each.
-        width: 350px;
-        height: 50px;
-        // This makes the card a flex container and its children flex items.
-        display: flex;
-        // This makes the main axis vertical and lays out the flex items in a column.
-        flex-direction: column;
-        // This aligns the flex items to the right.
-        align-items: flex-end;
-        // This justifies the content to the space-between.
-        justify-content: space-between;
-        // This sets the padding inside the card.
-        padding: 10px;
-
-        align-items: flex-start; /* Align items to the start (left side) of the card */
-        justify-content: space-between; /* Distribute space evenly between items */
-
-        border-radius: 20px;
-        background-color: white;
-
-        transition: width 0.3s ease;
-
-        margin-left: 1478px;
-        top: -206px;
-
-        opacity: 0; /* Hide the card initially */
-
-        /* Add the animation */
-        animation: slideUpFadeIn 2s ease-out;
-
-        // cards remain visible after the animation is complete.
-        animation-fill-mode: forwards;
-
-        /* Hide the checkmark initially and set its width to 0 */
-        .checkmark, .custom-checkmark {
-            opacity: 0;
-            width: 0;
-            /* Start with the element's width at 0 */
-            /* The checkmark is moved 100px to the right (offscreen) */
-            transform: translateX(100px); 
-            /* Transition both the width, opacity and transform properties */
-            transition: width 0.5s, opacity 0.5s, transform 0.5s; 
-        }    
     }
 
     .hide {
@@ -500,7 +509,63 @@ Fix W3*/
         }
     }
 
+     // The styles for the card
+    .card-enchanted-plate {
+        position: relative;
+        width: 350px;
+        min-width: 200px;
+        height: 71px;
+        // This makes the card a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This aligns the flex items to the right.
+        align-items: flex-end;
+        // This justifies the content to the space-between.
+        justify-content: space-between;
+        // This sets the padding inside the card.
+        padding: 10px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+        align-items: flex-start; /* Align items to the start (left side) of the card */
+        justify-content: space-between; /* Distribute space evenly between items */
+
+        border-radius: 20px;
+        background-color: white;
+
+        transition: width 0.3s ease;
+
+        margin-left: 22px;
+        top: 11px;
+
+        opacity: 0; /* Hide the card initially */
+
+        overflow: hidden;
+
+        .card-text-menu {
+            margin: 0;
+            margin-top: 11px;
+            transition: width 0.3s ease; 
+            white-space: nowrap;  // Prevents the text from wrapping to the next line
+            overflow: hidden;  // Clips the text if it overflows
+            text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
+            width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+            display: block;  // Treat this element as a block level element
+        }
+
+        /* Hide the checkmark initially and set its width to 0 */
+        .checkmark, .custom-checkmark {
+            opacity: 0;
+            width: 0;
+            /* Start with the element's width at 0 */
+            /* The checkmark is moved 100px to the right (offscreen) */
+            transform: translateX(100px); 
+            /* Transition both the width, opacity and transform properties */
+            transition: width 0.5s, opacity 0.5s, transform 0.5s; 
+        }
+    }
 }
+
 
 @media (min-width: 450px) and (max-width: 990px) {
     .menu-container-ohmyfood {

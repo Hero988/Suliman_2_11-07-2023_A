@@ -251,6 +251,7 @@
         @extend .menu-content-container;
         padding: 36px 0; /* Adds 20px padding to the top and bottom */
         padding-top: 100px;
+        overflow-x: hidden;
     }
 
     .section-title-restaurant {
