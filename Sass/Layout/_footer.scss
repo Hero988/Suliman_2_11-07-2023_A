@@ -97,7 +97,7 @@
 
         padding-bottom: 50px;
         
-        width: 2181px ;
+        width: 100vw ;
         
         margin-top: 1px;
     
@@ -127,19 +127,14 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 990px) { 
+@media (min-width: 450px) and (max-width: 990px) { 
     .footer-container-menu-enchanted-plate {
         width: 934px;
         margin-top: -381px;
     }
 
     .footer-container-menu {
-        width: 990px;
-    }
-}
-
-@media (min-width: 991px) and (max-width: 1471px) { 
-    .footer-container-menu {
-        width: 100vw;
+        width: 126vw;
+        overflow-x: hidden;
     }
 }

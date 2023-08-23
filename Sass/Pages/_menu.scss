@@ -7,17 +7,20 @@
 .menu-container-ohmyfood {
     position: relative;
 
-    top: -59px;
+    top: -56px;
 
     // This sets the width and height of the container to 100px each.
     width: 100vw;
-    height: 1200px;
+    height: 1215px;
 
     padding-bottom: 50px;
     
     // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
     
     // This sets the background color of the container to F6F6F6.
     background-color: #F6F6F6;
@@ -80,8 +83,8 @@
     // The styles for the card
     .card {
         position: relative;
-        // This sets the width and height of the card to 100px each.
-        width: 350px;
+        max-width: 350px; /* Set a max width, but allow it to be smaller if needed */
+        min-width: 200px; /* Set a minimum width to ensure it doesn't get too small */
         height: 50px;
         // This makes the card a flex container and its children flex items.
         display: flex;
@@ -128,11 +131,24 @@
         }
     }
 
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left side) of the card */
-    justify-content: space-between; /* Distribute space evenly between items */
+    .card-text-menu {
+        margin: 0;
+        font-size: 16.85px;
+        margin-top: 11px;
+        transition: width 0.3s ease;
+    
+        white-space: nowrap;  // Prevents the text from wrapping to the next line
+        overflow: hidden;  // Clips the text if it overflows
+        text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
+        width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+        display: block;  // Treat this element as a block level element
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start (left side) of the card */
+        justify-content: space-between; /* Distribute space evenly between items */
 }    
 
 /* When the card is hovered over */
@@ -172,12 +188,6 @@
         animation-play-state: running;
         // In simpler terms, this code makes each card fade in one by one, each half a second apart, from being completely invisible to fully visible.
     }
-}
-
-/* adjust width of .card-text-menu */
-.card-text-menu {
-    width: 100%; /* take up full width of the card */
-    /* rest of your styles... */
 }
 
 .checkmark {
@@ -223,19 +233,6 @@
     font-weight: bold;
     font-size: 19px;
     top: 4px;
-}
-
-.card-text-menu {
-    margin: 0;
-    font-size: 16.8px;
-    margin-top: 11px;
-    transition: width 0.3s ease;
-
-    white-space: nowrap;  // Prevents the text from wrapping to the next line
-    overflow: hidden;  // Clips the text if it overflows
-    text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
-    width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
-    display: block;  // Treat this element as a block level element
 }
 
 .card-price {
@@ -284,55 +281,19 @@ Fix W3*/
     height: 71px;
 }
 
-.menu-container-ohmyfood-enchanted-plate {
-    position: relative;
-
-    top:-114px;
-    height: 1266px;
-
-    // This sets the width and height of the container to 100px each.
-    width: 100vw;
-
-    padding-bottom: 50px;
-    
-    // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    
-    // This sets the background color of the container to F6F6F6.
-    background-color: #F6F6F6;
-
-}
-
-.menu-container-ohmyfood-Le-Gourmand {
-    position: relative;
-
-    top:-114px;
-    height: 1217px;
-
-    // This sets the width and height of the container to 100px each.
-    width: 100vw;
-    height: 1200px;
-
-    padding-bottom: 50px;
-    
-    // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    
-    // This sets the background color of the container to F6F6F6.
-    background-color: #F6F6F6;
-}
-
 @include PC {
     .menu-container-ohmyfood {
         position: relative;
 
+        overflow: hidden;
+
         top: -2px;
 
         // This sets the width and height of the container to 100px each.
-        width: 2181px;
+        width: 100vw;
         height: 781px;
+
+        overflow-x: hidden;
 
         padding-bottom: 50px;
         
@@ -342,6 +303,7 @@ Fix W3*/
         
         // This sets the background color of the container to F6F6F6.
         background-color: #F6F6F6;
+        
     }
 
     .grid-title-dessert-enchanted-plate {
@@ -352,37 +314,9 @@ Fix W3*/
         top: 155px;
     }
 
-    .card-1 {
-        top: 239px;
-    }
-
-    .card-6 {
-        top: 154px;
-    }
-
     .card-8 {
         top: 143px;
-        right: 1240px;
-    }
-
-    .menu-container-ohmyfood-Le-Gourmand {
-        position: relative;
-
-        top:-244px;
-        right: 18px;
-
-        // This sets the width and height of the container to 100px each.
-        width: 2044px;
-        height: 758px;
-
-        padding-bottom: 50px;
-        
-        // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        
-        // This sets the background color of the container to F6F6F6.
-        background-color: #F6F6F6;
+        right: 28px;
     }
 
     .menu-container-ohmyfood-enchanted-plate {
@@ -504,16 +438,78 @@ Fix W3*/
         margin-top: 60px;           
     }
 
+    .Enchanted-Plate {
+        height: 524px;
+    }
+
+    
+
+    // The styles for the card
+    .card {
+        position: relative;
+        width: 350px;
+        min-width: 200px;
+        height: 50px;
+        // This makes the card a flex container and its children flex items.
+        display: flex;
+        // This makes the main axis vertical and lays out the flex items in a column.
+        flex-direction: column;
+        // This aligns the flex items to the right.
+        align-items: flex-end;
+        // This justifies the content to the space-between.
+        justify-content: space-between;
+        // This sets the padding inside the card.
+        padding: 10px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+        align-items: flex-start; /* Align items to the start (left side) of the card */
+        justify-content: space-between; /* Distribute space evenly between items */
+
+        border-radius: 20px;
+        background-color: white;
+
+        transition: width 0.3s ease;
+
+        margin-left: 22px;
+        top: 11px;
+
+        opacity: 0; /* Hide the card initially */
+
+        overflow: hidden;
+
+        .card-text-menu {
+            margin: 0;
+            margin-top: 11px;
+            transition: width 0.3s ease; 
+            white-space: nowrap;  // Prevents the text from wrapping to the next line
+            overflow: hidden;  // Clips the text if it overflows
+            text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
+            width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+            display: block;  // Treat this element as a block level element
+        }
+
+        /* Hide the checkmark initially and set its width to 0 */
+        .checkmark, .custom-checkmark {
+            opacity: 0;
+            width: 0;
+            /* Start with the element's width at 0 */
+            /* The checkmark is moved 100px to the right (offscreen) */
+            transform: translateX(100px); 
+            /* Transition both the width, opacity and transform properties */
+            transition: width 0.5s, opacity 0.5s, transform 0.5s; 
+        }
+    }
+
 }
 
-@media (min-width: 768px) and (max-width: 990px) {
+@media (min-width: 450px) and (max-width: 990px) {
     .menu-container-ohmyfood {
         position: relative;
 
         top: -32px;
 
         // This sets the width and height of the container to 100px each.
-        width: 990px;
+        width: 126vw;
         height: 1255px;
 
         padding-bottom: 50px;
@@ -524,6 +520,13 @@ Fix W3*/
         
         // This sets the background color of the container to F6F6F6.
         background-color: #F6F6F6;
+
+        overflow-x: hidden;
+
+    }
+
+    .menu-container-main {
+        margin-left: -14px;
     }
 
     .hide2 {
@@ -553,26 +556,6 @@ Fix W3*/
 
     }
 
-    .menu-container-ohmyfood-Le-Gourmand {
-        position: relative;
-    
-        top:-385px;
-        height: 1217px;
-        right: 10px;
-
-        // This sets the width and height of the container to 100px each.
-        width: 1010px;
-
-        padding-bottom: 50px;
-        
-        // This sets the top-left and top-right border radii to 10px each, making the top corners rounded.
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        
-        // This sets the background color of the container to F6F6F6.
-        background-color: #F6F6F6;
-    }
-
     .grid {
         margin-left: 200px;
     }
@@ -586,10 +569,11 @@ Fix W3*/
     }
 
     .menu-title {
-        right: -266px;
+        right: -118px;
     }
 }
 
+/*
 @media (min-width: 991px) and (max-width: 1471px) {
     .card-3 {
         right: 508px;
@@ -616,4 +600,5 @@ Fix W3*/
         right: 411px;
     }
 }
+*/
 

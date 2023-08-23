@@ -5,8 +5,8 @@
         display: block;  
         
         //This is used to automatically set the left and right margins to equal values, effectively centering the block within its container. 
-        margin: auto;    
-
+        margin: auto;  
+        
         //This is used to make sure that the image will scale to the width of its container.
         width: 40%;
 
@@ -108,6 +108,7 @@
 
 // mixin for PC screens     
 @include PC {
+
     .logo img{
 
         position: relative;
@@ -146,16 +147,17 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 990px) { 
+@media (min-width: 450px) and (max-width: 990px) { 
     .arrow-left-custom {
         position: relative;
-        right: 81vw;
+        right: 101vw;
         font-size: 20px;
         color: #353535;
     }
 
     .logo {
-        width: 100vw;
+        width: 125vw;
+        overflow-x: hidden;
     }
 }
 
