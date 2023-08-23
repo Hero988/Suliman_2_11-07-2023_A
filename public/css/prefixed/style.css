@@ -904,7 +904,7 @@ Fix W3*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 310px;
+    width: 200px;
     display: block;
   }
   .card-enchanted-plate .checkmark, .card-enchanted-plate .checkmark-enchanted-plate, .card-enchanted-plate .custom-checkmark {
@@ -947,7 +947,7 @@ Fix W3*/
     right: 6px;
   }
   .grid {
-    margin-left: 200px;
+    margin-left: 74px;
   }
   .hide {
     display: none;
@@ -1425,6 +1425,14 @@ Fix W3*/
 * {
   margin: 0;
   padding: 0;
+}
+
+.menu-html {
+  overflow-x: hidden;
+}
+
+.menu-body {
+  overflow-x: hidden;
 }
 
 body {

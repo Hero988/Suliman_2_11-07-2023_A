@@ -549,7 +549,7 @@ Fix W3*/
             white-space: nowrap;  // Prevents the text from wrapping to the next line
             overflow: hidden;  // Clips the text if it overflows
             text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
-            width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+            width: 200px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
             display: block;  // Treat this element as a block level element
         }
 
@@ -622,7 +622,7 @@ Fix W3*/
     }
 
     .grid {
-        margin-left: 200px;
+        margin-left: 74px;
     }
 
     .hide {
