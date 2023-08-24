@@ -150,15 +150,17 @@
         white-space: nowrap;  // Prevents the text from wrapping to the next line
         overflow: hidden;  // Clips the text if it overflows
         text-overflow: ellipsis;  // Displays an ellipsis ("...") to represent clipped text
-        width: 310px;  // Adjust this value as needed. This sets the maximum width before text gets clipped.
+        max-width: calc(100% - 36px); /* Adjusting for card-price width and some spacing */
         display: block;  // Treat this element as a block level element
     }
 
-    .card-content {
+
+     .card-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* Align items to the start (left side) of the card */
         justify-content: space-between; /* Distribute space evenly between items */
+        width: 100%; /* Take up the full width of .card */
 }    
 
 /* When the card is hovered over */
@@ -274,6 +276,10 @@ svg {
     font-weight: bold;
     font-size: 19px;
     top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; /* Take up the full width of .card-content */
 }
 
 .card-price {
@@ -283,8 +289,7 @@ svg {
     right: 13px;
     top: 44px;
     transition: right 0.3s ease;
-    width: auto;   // Allow it to size according to its content
-    max-width: calc(100% - 20px);  // Ensure it doesn't overflow the card's width
+    width: 26px;   // Allow it to size according to its content
 }
 
 .grid-title {

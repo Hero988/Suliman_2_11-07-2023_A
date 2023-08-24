@@ -582,7 +582,7 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 310px;
+  max-width: calc(100% - 36px); /* Adjusting for card-price width and some spacing */
   display: block;
 }
 
@@ -591,6 +591,7 @@ a {
   flex-direction: column;
   align-items: flex-start; /* Align items to the start (left side) of the card */
   justify-content: space-between; /* Distribute space evenly between items */
+  width: 100%; /* Take up the full width of .card */
 }
 
 /* When the card is hovered over */
@@ -720,6 +721,10 @@ svg {
   font-weight: bold;
   font-size: 19px;
   top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* Take up the full width of .card-content */
 }
 
 .card-price {
@@ -729,8 +734,7 @@ svg {
   right: 13px;
   top: 44px;
   transition: right 0.3s ease;
-  width: auto;
-  max-width: calc(100% - 20px);
+  width: 26px;
 }
 
 .grid-title {
