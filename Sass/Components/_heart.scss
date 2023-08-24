@@ -56,10 +56,10 @@
 }
 
 .heart-custom-title {
-    position: relative;
-    right: -344px;
+    position: absolute;
+    right: 27px;
     font-size: 30px;
-    top: -3px;
+    top: 44px;
     &:hover {
         opacity: 0;
         color: #FFFFFF;
@@ -73,10 +73,10 @@
 }
 
 .heart-custom-title2 {
-    position: relative;
-    right: -310px;
+    position: absolute;
+    right: 27px;
     font-size: 30px;
-    top: -3px;
+    top: 44px;
 
     /* Apply a linear gradient as the background */
     background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
@@ -113,17 +113,34 @@
 @media (min-width: 450px) and (max-width: 990px) { 
     .heart-custom-title {
         position: relative;
-        right: -430px;
+        right: -398px;
         font-size: 30px;
         top: -3px;  
     }
 
     .heart-custom-title2 {
         position: relative;
-        right: -396.5px;
+        right: -364.5px;
         font-size: 30px;
         top: -3px;
     
     }
 
+}
+
+@include PC {
+    .heart-custom-title {
+        position: relative;
+        right: -366px;
+        font-size: 30px;
+        top: -3px;  
+    }
+
+    .heart-custom-title2 {
+        position: relative;
+        right: -332.5px;
+        font-size: 30px;
+        top: -3px;
+    
+    }
 }

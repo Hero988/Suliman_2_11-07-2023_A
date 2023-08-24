@@ -533,7 +533,8 @@ a {
 }
 .card {
   position: relative;
-  max-width: 350px; /* Set a max width, but allow it to be smaller if needed */
+  max-width: 350px;
+  min-width: 200px;
   height: 50px;
   display: flex;
   flex-direction: column;
@@ -593,10 +594,11 @@ a {
   position: relative;
   cursor: pointer;
   /* Make the checkmark visible and increase its width */
+  /* Add a spin effect for .custom-checkmark */
 }
 .card:hover .card-price {
   /* Moves the card price to the right when the card is hovered on */
-  right: -254px;
+  right: 75px;
 }
 .card:hover .card-text-menu {
   width: 250px;
@@ -607,6 +609,10 @@ a {
   width: 70px; /* Update this value to the original width of your checkmark */
   /* Move the checkmark to its original position */
   transform: translateX(0);
+}
+.card:hover .custom-checkmark {
+  transform: translateX(0) rotate(0deg);
+  transition: transform 0.5s ease-out;
 }
 
 .grid .card:nth-of-type(1) {
@@ -660,7 +666,7 @@ a {
 }
 
 .checkmark, .checkmark-enchanted-plate {
-  position: relative;
+  position: absolute;
   font-size: 25px;
   color: white;
   width: 70px;
@@ -668,8 +674,8 @@ a {
   background-color: #99E2D0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  top: -82px;
-  right: -290px;
+  top: 0px;
+  right: 0px;
 }
 
 .checkmark-enchanted-plate {
@@ -683,6 +689,7 @@ a {
   top: 24px;
   height: 100px;
   width: 100px;
+  transform: rotate(50deg);
 }
 
 .card-title {
@@ -694,12 +701,14 @@ a {
 }
 
 .card-price {
-  position: relative;
+  position: absolute;
   font-weight: bold;
   font-size: 16px;
-  right: -321px;
-  top: -21px;
+  right: 13px;
+  top: 44px;
   transition: right 0.3s ease;
+  width: auto;
+  max-width: calc(100% - 20px);
 }
 
 .grid-title {
@@ -727,7 +736,7 @@ Fix W3*/
 
 .card-enchanted-plate {
   position: relative;
-  width: 350px;
+  max-width: 350px;
   min-width: 200px;
   height: 71px;
   display: flex;
@@ -772,8 +781,8 @@ Fix W3*/
     position: relative;
     overflow: hidden;
     top: -2px;
-    width: 100vw;
-    height: 781px;
+    width: 2103px;
+    height: 866px;
     overflow-x: hidden;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
@@ -787,8 +796,8 @@ Fix W3*/
     top: 155px;
   }
   .card-8 {
-    top: 143px;
-    right: 28px;
+    top: 112px;
+    right: 774px;
   }
   .menu-container-ohmyfood-enchanted-plate {
     position: relative;
@@ -815,8 +824,7 @@ Fix W3*/
   .menu-container-main {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    width: 100vw;
+    gap: 111px;
     margin-top: 27px;
   }
   .grid-2 {
@@ -834,6 +842,10 @@ Fix W3*/
   .Enchanted-Plate {
     height: 524px;
   }
+  .card-3 {
+    top: 109px;
+    right: 778px;
+  }
   .card {
     position: relative;
     width: 350px;
@@ -849,8 +861,7 @@ Fix W3*/
     border-radius: 20px;
     background-color: white;
     transition: width 0.3s ease;
-    margin-left: 22px;
-    top: 11px;
+    margin-left: 0px;
     opacity: 0; /* Hide the card initially */
     overflow: hidden;
     /* Hide the checkmark initially and set its width to 0 */
@@ -921,7 +932,7 @@ Fix W3*/
     position: relative;
     top: -32px;
     width: 126vw;
-    height: 1255px;
+    height: 1275px;
     padding-bottom: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -1296,10 +1307,10 @@ Fix W3*/
 }
 
 .heart-custom-title {
-  position: relative;
-  right: -344px;
+  position: absolute;
+  right: 27px;
   font-size: 30px;
-  top: -3px;
+  top: 44px;
 }
 .heart-custom-title:hover {
   opacity: 0;
@@ -1311,10 +1322,10 @@ Fix W3*/
 }
 
 .heart-custom-title2 {
-  position: relative;
-  right: -310px;
+  position: absolute;
+  right: 27px;
   font-size: 30px;
-  top: -3px;
+  top: 44px;
   /* Apply a linear gradient as the background */
   background: -webkit-linear-gradient(to right, #FF79DA, #9356DC);
   background: linear-gradient(to right, #FF79DA, #9356DC);
@@ -1342,13 +1353,27 @@ Fix W3*/
 @media (min-width: 450px) and (max-width: 990px) {
   .heart-custom-title {
     position: relative;
-    right: -430px;
+    right: -398px;
     font-size: 30px;
     top: -3px;
   }
   .heart-custom-title2 {
     position: relative;
-    right: -396.5px;
+    right: -364.5px;
+    font-size: 30px;
+    top: -3px;
+  }
+}
+@media (min-width: 991px) {
+  .heart-custom-title {
+    position: relative;
+    right: -366px;
+    font-size: 30px;
+    top: -3px;
+  }
+  .heart-custom-title2 {
+    position: relative;
+    right: -332.5px;
     font-size: 30px;
     top: -3px;
   }

@@ -85,7 +85,8 @@
     // The styles for the card
     .card {
         position: relative;
-        max-width: 350px; /* Set a max width, but allow it to be smaller if needed */
+        max-width: 350px;
+        min-width: 200px;
         height: 50px;
         // This makes the card a flex container and its children flex items.
         display: flex;
@@ -163,7 +164,7 @@
 
     .card-price {
         /* Moves the card price to the right when the card is hovered on */
-        right: -254px;
+        right: 75px;
     }
 
     .card-text-menu {
@@ -177,6 +178,12 @@
         width: 70px; /* Update this value to the original width of your checkmark */
         /* Move the checkmark to its original position */
         transform: translateX(0); 
+    }
+
+    /* Add a spin effect for .custom-checkmark */
+    .custom-checkmark {
+        transform: translateX(0) rotate(0deg);  // Adding a rotate of 360 degrees
+        transition: transform 0.5s ease-out;  // This adds a smooth transition effect
     }
 }
 
@@ -196,7 +203,7 @@
 }
 
 .checkmark {
-    position: relative;
+    position: absolute;
 
     font-size: 25px;
 
@@ -212,8 +219,8 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    top: -82px;
-    right: -290px;
+    top: 0px;
+    right: 0px;
     
 } 
 
@@ -229,6 +236,7 @@
     top: 24px;
     height: 100px;
     width: 100px;
+    transform: rotate(50deg);
 }
 
 .card-title {
@@ -241,12 +249,14 @@
 }
 
 .card-price {
-    position: relative;
+    position: absolute;
     font-weight: bold;
     font-size: 16px;
-    right: -321px;
-    top: -21px;
+    right: 13px;
+    top: 44px;
     transition: right 0.3s ease;
+    width: auto;   // Allow it to size according to its content
+    max-width: calc(100% - 20px);  // Ensure it doesn't overflow the card's width
 }
 
 .grid-title {
@@ -283,7 +293,7 @@ Fix W3*/
     // The styles for the card
     .card-enchanted-plate {
         position: relative;
-        width: 350px;
+        max-width: 350px;
         min-width: 200px;
         height: 71px;
         // This makes the card a flex container and its children flex items.
@@ -345,8 +355,8 @@ Fix W3*/
         top: -2px;
 
         // This sets the width and height of the container to 100px each.
-        width: 100vw;
-        height: 781px;
+        width: 2103px;
+        height: 866px;
 
         overflow-x: hidden;
 
@@ -370,8 +380,8 @@ Fix W3*/
     }
 
     .card-8 {
-        top: 143px;
-        right: 28px;
+        top: 112px;
+        right: 774px;
     }
 
     .menu-container-ohmyfood-enchanted-plate {
@@ -419,9 +429,7 @@ Fix W3*/
         // This makes the main axis vertical and lays out the flex items in a column.
         flex-direction: column;
         // This adds some space between the flex items.
-        gap: 40px;
-
-        width: 100vw;
+        gap: 111px;
 
         margin-top: 27px;
     }
@@ -452,6 +460,11 @@ Fix W3*/
         height: 524px;
     }
 
+    .card-3 {
+        top:109px;
+        right: 778px;
+    }
+
     // The styles for the card
     .card {
         position: relative;
@@ -477,8 +490,7 @@ Fix W3*/
 
         transition: width 0.3s ease;
 
-        margin-left: 22px;
-        top: 11px;
+        margin-left: 0px;
 
         opacity: 0; /* Hide the card initially */
 
@@ -573,7 +585,7 @@ Fix W3*/
 
         // This sets the width and height of the container to 100px each.
         width: 126vw;
-        height: 1255px;
+        height: 1275px;
 
         padding-bottom: 50px;
         
