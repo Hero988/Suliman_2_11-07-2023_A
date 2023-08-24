@@ -531,6 +531,10 @@ a {
     transform: translateY(0);
   }
 }
+.enchanted-plate-ohmyfood-new {
+  height: 1247px;
+}
+
 .card {
   position: relative;
   max-width: 350px;
@@ -1258,7 +1262,7 @@ Fix W3*/
     width: 200px;
     position: relative;
     top: 35px;
-    right: -300px;
+    right: -166px;
   }
 }
 .heart-custom {
