@@ -191,7 +191,7 @@
         transition: transform 0.5s ease-out;  // This adds a smooth transition effect
     }
 
-    #tick {
+    .tick {
         animation: spinTick 0.5s linear; // Spin animation without delay
     }
 }
@@ -200,7 +200,7 @@ svg {
     fill: white;
 }
 
-#tick {
+.tick {
     fill: #99e2d0;
     transform-origin: center; // Set the center of rotation
     animation: none;
