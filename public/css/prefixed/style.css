@@ -618,7 +618,7 @@ a {
 .card:hover .custom-checkmark {
   transition: transform 0.5s ease-out;
 }
-.card:hover .tick {
+.card:hover .tick_card {
   animation: spinTick 0.5s linear;
 }
 
@@ -626,7 +626,7 @@ svg {
   fill: white;
 }
 
-.tick {
+.tick_card {
   fill: #99e2d0;
   transform-origin: center;
   animation: none;
